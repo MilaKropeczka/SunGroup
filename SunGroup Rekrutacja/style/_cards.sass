@@ -1,54 +1,125 @@
-// ============= CARDS ==================
 section.cards
-    display: grid
-    @media only screen and (min-width: 800px)
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    @media only screen and (min-width: $deskop)
+        justify-items: center
         grid-template-columns: repeat(3, 1fr)
         grid-template-rows: 1fr
 
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
         grid-template-rows: repeat(3, 1fr)
     .card
         overflow: hidden
-        @media only screen and (min-width: 800px)
+        @media only screen and (min-width: $deskop)
             width: 432px
             height: 552px
             margin: 32px
-            // float: left
         img
             border-radius: 8px
-            @media only screen and (max-width: 800px)
+            @media only screen and (max-width: $mobile)
                 min-height: 50%
-            @media only screen and (min-width: 800px)
+            @media only screen and (min-width: $deskop)
                 height: 320px
                 min-width: 100%
         .card-body
-            height: 100px
+            // height: 100px
+            @media only screen and (max-width: $mobile)
+                text-align: center
+                margin: 30px
     .grey-600
         color: $grey-600
     .m-1
         margin-top: 10px
 
 #card1
-    @media only screen and (min-width: 800px)
+    @media only screen and (min-width: $deskop)
         grid-column: 1/2
         grid-row: 1/2
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: $mobile)
         grid-column: 1/2
         grid-row: 1/2
 
 #card2
-    @media only screen and (min-width: 800px)
+    @media only screen and (min-width: $deskop)
         grid-column: 2/3
         grid-row: 1/2
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: $mobile)
         grid-column: 1/2
         grid-row: 2/3
 
 #card3
-    @media only screen and (min-width: 800px)
+    @media only screen and (min-width: $deskop)
         grid-column: 3/4
         grid-row: 1/2
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: $mobile)
         grid-column: 1/2
         grid-row: 3/4
+section .item4 .box *
+        margin: 10px
+
+
+
+
+
+.card > .card-img-top
+    display: flex
+    justify-content: center
+
+
+
+//  section.cards
+//     display: grid
+//     @media only screen and (min-width: 800px)
+//         justify-items: center
+//         grid-template-columns: repeat(3, 1fr)
+//         grid-template-rows: 1fr
+
+//     @media only screen and (max-width: 800px)
+//         grid-template-columns: 1fr
+//         grid-template-rows: repeat(3, 1fr)
+//     .card
+//         overflow: hidden
+//         @media only screen and (min-width: 800px)
+//             width: 432px
+//             height: 552px
+//             margin: 32px
+//             // float: left
+//         img
+//             border-radius: 8px
+//             @media only screen and (max-width: 800px)
+//                 min-height: 50%
+//             @media only screen and (min-width: 800px)
+//                 height: 320px
+//                 min-width: 100%
+//         .card-body
+//             height: 100px
+//     .grey-600
+//         color: $grey-600
+//     .m-1
+//         margin-top: 10px
+
+// #card1
+//     @media only screen and (min-width: 800px)
+//         grid-column: 1/2
+//         grid-row: 1/2
+//     @media only screen and (max-width: 800px)
+//         grid-column: 1/2
+//         grid-row: 1/2
+
+// #card2
+//     @media only screen and (min-width: 800px)
+//         grid-column: 2/3
+//         grid-row: 1/2
+//     @media only screen and (max-width: 800px)
+//         grid-column: 1/2
+//         grid-row: 2/3
+
+// #card3
+//     @media only screen and (min-width: 800px)
+//         grid-column: 3/4
+//         grid-row: 1/2
+//     @media only screen and (max-width: 800px)
+//         grid-column: 1/2
+//         grid-row: 3/4

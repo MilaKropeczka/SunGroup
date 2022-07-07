@@ -169,7 +169,7 @@ hr {
   border: none;
   background-color: #DEE1E6;
   height: 1px;
-  max-width: 1360px;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }
@@ -342,10 +342,18 @@ input[type=checkbox]:active::after {
 }
 
 section.cards {
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   section.cards {
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
@@ -359,7 +367,7 @@ section.cards {
 section.cards .card {
   overflow: hidden;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   section.cards .card {
     width: 432px;
     height: 552px;
@@ -374,14 +382,17 @@ section.cards .card img {
     min-height: 50%;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   section.cards .card img {
     height: 320px;
     min-width: 100%;
   }
 }
-section.cards .card .card-body {
-  height: 100px;
+@media only screen and (max-width: 800px) {
+  section.cards .card .card-body {
+    text-align: center;
+    margin: 30px;
+  }
 }
 section.cards .grey-600 {
   color: #9BA0AC;
@@ -390,7 +401,7 @@ section.cards .m-1 {
   margin-top: 10px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   #card1 {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -403,7 +414,7 @@ section.cards .m-1 {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   #card2 {
     grid-column: 2/3;
     grid-row: 1/2;
@@ -416,7 +427,7 @@ section.cards .m-1 {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   #card3 {
     grid-column: 3/4;
     grid-row: 1/2;
@@ -427,6 +438,19 @@ section.cards .m-1 {
     grid-column: 1/2;
     grid-row: 3/4;
   }
+}
+
+section .item4 .box * {
+  margin: 10px;
+}
+
+.card > .card-img-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 nav {
@@ -468,11 +492,11 @@ header {
 @media only screen and (max-width: 800px) {
   header {
     grid-template-columns: 1fr;
-    grid-template-row: 1fr 1fr;
-    height: 1200px;
+    grid-template-row: 1fr;
+    height: 800px;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   header {
     grid-template-columns: 1fr 1fr;
     grid-template-row: 1fr;
@@ -483,14 +507,15 @@ header .header-left {
   position: relative;
   background-color: #242529;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   header .header-left {
     grid-column: 1/2;
   }
 }
 @media only screen and (max-width: 800px) {
   header .header-left {
-    grid-row: 2/3;
+    grid-row: 1/2;
+    padding: 100px 0;
   }
 }
 header .header-left .box {
@@ -500,11 +525,14 @@ header .header-left .box {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
+header .header-left .box > * {
+  margin: 15px;
+}
 header .right {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   header .right {
     grid-column: 2/3;
   }
@@ -517,7 +545,7 @@ header .right {
 header .right img {
   position: absolute;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   header .right {
     width: calc(100vw - 50%);
   }
@@ -525,18 +553,6 @@ header .right img {
 
 .white {
   color: #FFFFFF;
-}
-
-.m-2 {
-  margin-top: 20px;
-}
-
-.m-3 {
-  margin-top: 30px;
-}
-
-.m-4 {
-  margin-top: 40px;
 }
 
 .iconBox {
@@ -582,7 +598,7 @@ header .right img {
 .container-about .bottom {
   display: grid;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .container-about .bottom {
     grid-template-columns: repeat(3, 1fr);
     height: 266px;
@@ -603,15 +619,20 @@ header .right img {
   min-width: 200px;
   max-width: 432px;
 }
-.container-about .bottom .items .left {
+@media only screen and (max-width: 800px) {
+  .container-about .bottom .items > * {
+    margin-bottom: 50px;
+  }
+}
+.container-about .bottom .items > * .left {
   height: 100%;
   grid-column: 1/2;
 }
-.container-about .bottom .items .right {
+.container-about .bottom .items > * .right {
   height: 100%;
   grid-column: 2/3;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .container-about .bottom .item1 {
     grid-column: 1/2;
   }
@@ -621,7 +642,7 @@ header .right img {
     grid-row: 1/2;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .container-about .bottom .item2 {
     grid-column: 2/3;
   }
@@ -631,7 +652,7 @@ header .right img {
     grid-row: 2/3;
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .container-about .bottom .item3 {
     grid-column: 3/4;
   }
@@ -656,7 +677,7 @@ header .right img {
   overflow: hidden;
   grid-template-columns: 1fr;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .section-offer {
     height: 2833px;
     grid-template-rows: repeat(4, 1fr);
@@ -665,13 +686,13 @@ header .right img {
 @media only screen and (max-width: 800px) {
   .section-offer {
     grid-template-rows: repeat(3, 1fr);
-    height: 4250px;
+    padding: 100px 0;
   }
 }
 .section-offer .items {
   display: grid;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .section-offer .items {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -680,13 +701,13 @@ header .right img {
 @media only screen and (max-width: 800px) {
   .section-offer .items {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 320px 1fr;
   }
 }
 .section-offer .items .left {
   position: relative;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .section-offer .items .left {
     grid-column: 1/2;
   }
@@ -699,7 +720,7 @@ header .right img {
 .section-offer .items .right {
   position: relative;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .section-offer .items .right {
     grid-column: 2/3;
   }
@@ -727,7 +748,7 @@ header .right img {
   max-width: 900px;
   text-align: center;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   .section-offer .item4 .box {
     top: 50%;
     left: 50%;
@@ -735,43 +756,60 @@ header .right img {
             transform: translate(-50%, -50%);
   }
 }
-.section-offer .item4 .box * {
+
+.section-offer .box > * {
   margin: 15px;
 }
-.section-offer img.image {
+.section-offer .box > * img.image {
   border-radius: 8px;
 }
-@media only screen and (min-width: 800px) {
-  .section-offer img.image {
+@media only screen and (min-width: 801px) {
+  .section-offer .box > * img.image {
     margin: 128px 60px;
     height: 548px;
     width: 548px;
   }
 }
-@media only screen and (max-width: 800px) {
-  .section-offer img.image {
-    height: 100%;
-    width: 100%;
+.section-offer .items > * {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (min-width: 801px) {
+  .position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
-.position-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.position-center-x {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+@media only screen and (min-width: 801px) {
+  .position-center-x {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .grey-700 {
   color: #858993;
+}
+
+@media only screen and (min-width: 801px) {
+  .hidden-deskop {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hidden-mobile {
+    display: none;
+  }
 }
 
 section.blog {
@@ -826,38 +864,17 @@ section.other .box * {
 section.write-us {
   position: relative;
   background-color: #FFFFFF;
-  display: grid;
-}
-@media only screen and (min-width: 800px) {
-  section.write-us {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    height: 942px;
-  }
-}
-@media only screen and (max-width: 800px) {
-  section.write-us {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 section.write-us .left {
   overflow: hidden;
-  position: absolute;
-}
-@media only screen and (min-width: 800px) {
-  section.write-us .left {
-    right: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    grid-column: 1/2;
-  }
-}
-@media only screen and (max-width: 800px) {
-  section.write-us .left {
-    grid-row: 1/2;
-  }
 }
 section.write-us .left .box {
   overflow: hidden;
@@ -884,27 +901,12 @@ section.write-us .left .box button {
 section.write-us .right {
   overflow: hidden;
 }
-@media only screen and (min-width: 800px) {
-  section.write-us .right {
-    grid-column: 2/3;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-}
-@media only screen and (max-width: 800px) {
-  section.write-us .right {
-    grid-row: 2/3;
-  }
-}
 section.write-us .right .box {
   overflow: hidden;
   border-radius: 8px;
   margin: 16px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 801px) {
   section.write-us .right .box {
     height: 686px;
     max-width: 664px;

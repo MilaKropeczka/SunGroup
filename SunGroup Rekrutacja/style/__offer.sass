@@ -1,0 +1,88 @@
+.section-offer
+    background-color: #fff
+    display: grid
+    overflow: hidden
+    grid-template-columns: 1fr
+    @media only screen and (min-width: $deskop)
+        height: 2833px
+        grid-template-rows: repeat(4, 1fr)
+    @media only screen and (max-width: $mobile)
+        grid-template-rows: repeat(3, 1fr)
+        padding: 100px 0
+
+    .items
+        display: grid
+        @media only screen and (min-width: $deskop)
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr
+        @media only screen and (max-width: $mobile)
+            grid-template-columns: 1fr
+            grid-template-rows: 320px 1fr
+        .left
+            position: relative
+            @media only screen and (min-width: $deskop)
+                grid-column: 1/2
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        .right
+            position: relative
+            @media only screen and (min-width: $deskop)
+                grid-column: 2/3
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+        #right
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        #left
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+        .box
+            max-width: 553px
+            @media only screen and (max-width: $mobile)
+    .item4
+        .box
+            position: relative
+            max-width: 900px
+            text-align: center
+            @media only screen and (min-width: $deskop)
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+.section-offer .box > *
+    margin: 15px
+
+    img.image
+        border-radius: 8px
+        @media only screen and (min-width: $deskop)
+            margin: 128px 60px
+            height: 548px
+            width: 548px
+        @media only screen and (max-width: $mobile)
+            // height: 100%
+            // width: 100%
+.section-offer .items > *
+    display: grid
+    justify-content: center
+
+.position-center
+    @media only screen and (min-width: $deskop)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+.position-center-x
+    @media only screen and (min-width: $deskop)
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+
+.grey-700
+    color: $grey-700
+
+.hidden-deskop
+    @media only screen and (min-width: $deskop)
+        display: none
+
+.hidden-mobile
+    @media only screen and (max-width: $mobile)
+        display: none

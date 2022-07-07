@@ -1,26 +1,11 @@
-// ================== WRITE US ====================
 section.write-us
     position: relative
     background-color: $white
-    display: grid
-    @media only screen and (min-width: 800px)
-        grid-template-columns: 1fr 1fr
-        grid-template-rows: 1fr
-        height: 942px
-    @media only screen and (max-width: 800px)
-        grid-template-columns: 1fr
-        grid-template-rows: 1fr 1fr
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
     .left
         overflow: hidden
-        position: absolute
-        @media only screen and (min-width: 800px)
-            right: 0
-            top: 50%
-            transform: translateY(-50%)
-            grid-column: 1/2
-        @media only screen and (max-width: 800px)
-            grid-row: 1/2
-
         .box
             overflow: hidden
             position: relative
@@ -41,22 +26,90 @@ section.write-us
                 right: 0px
     .right
         overflow: hidden
-        @media only screen and (min-width: 800px)
-            grid-column: 2/3
-            position: absolute
-            left: 0
-            top: 50%
-            transform: translateY(-50%)
-        @media only screen and (max-width: 800px)
-            grid-row: 2/3
         .box
             overflow: hidden
             border-radius: 8px
             margin: 16px
-            @media only screen and (min-width: 800px)
+            @media only screen and (min-width: $deskop)
                 height: 686px
                 max-width: 664px
-            @media only screen and (max-width: 800px)
+            @media only screen and (max-width: $mobile)
                 height: 686px
                 min-width: 200px
                 max-width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// section.write-us
+//     position: relative
+//     background-color: $white
+//     display: grid
+//     @media only screen and (min-width: 800px)
+//         grid-template-columns: 1fr 1fr
+//         grid-template-rows: 1fr
+//         height: 942px
+//     @media only screen and (max-width: 800px)
+//         grid-template-columns: 1fr
+//         grid-template-rows: 1fr 1fr
+//     .left
+//         overflow: hidden
+//         position: absolute
+//         @media only screen and (min-width: 800px)
+//             right: 0
+//             top: 50%
+//             transform: translateY(-50%)
+//             grid-column: 1/2
+//         @media only screen and (max-width: 800px)
+//             grid-row: 1/2
+
+//         .box
+//             overflow: hidden
+//             position: relative
+//             padding: 48px
+//             border-radius: 8px
+//             margin: 16px
+//             max-width: 664px
+//             height: 686px
+//             background-color: $primary-50
+//             .wrapper
+//                 display: grid
+//                 grid-template-columns: 1fr 1fr
+//             #message
+//                 max-width: 550px
+//             button
+//                 position: absolute
+//                 margin: 48px
+//                 right: 0px
+//     .right
+//         overflow: hidden
+//         @media only screen and (min-width: 800px)
+//             grid-column: 2/3
+//             position: absolute
+//             left: 0
+//             top: 50%
+//             transform: translateY(-50%)
+//         @media only screen and (max-width: 800px)
+//             grid-row: 2/3
+//         .box
+//             overflow: hidden
+//             border-radius: 8px
+//             margin: 16px
+//             @media only screen and (min-width: 800px)
+//                 height: 686px
+//                 max-width: 664px
+//             @media only screen and (max-width: 800px)
+//                 height: 686px
+//                 min-width: 200px
+//                 max-width: 100%

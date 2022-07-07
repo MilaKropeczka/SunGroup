@@ -1,45 +1,42 @@
-// ============= HEADER ================
 header
     overflow: hidden
     display: grid
-    @media only screen and (max-width: 800px)
+    @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
-        grid-template-row: 1fr 1fr
-        height: 1200px
-    @media only screen and (min-width: 800px)
+        // grid-template-row: 1fr 1fr
+        grid-template-row: 1fr
+        height: 800px
+    @media only screen and (min-width: $deskop)
         grid-template-columns: 1fr 1fr
         grid-template-row: 1fr
         height: 800px
     .header-left
         position: relative
         background-color: $grey-900
-        @media only screen and (min-width: 800px)
+        @media only screen and (min-width: $deskop)
             grid-column: 1/2
-        @media only screen and (max-width: 800px)
-            grid-row: 2/3
+        @media only screen and (max-width: $mobile)
+            // grid-row: 2/3
+            grid-row: 1/2
+            padding: 100px 0
         .box
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
+        .box > *
+            margin: 15px
     .right
         position: relative
         overflow: hidden
-        @media only screen and (min-width: 800px)
+        @media only screen and (min-width: $deskop)
             grid-column: 2/3
-        @media only screen and (max-width: 800px)
+        @media only screen and (max-width: $mobile)
             grid-row: 1/2
         img
             position: absolute
-        @media only screen and (min-width: 800px)
+        @media only screen and (min-width: $deskop)
             // left: -200px
             width: calc(100vw -  50%)
 .white
     color: $white
-
-.m-2
-    margin-top: 20px
-.m-3
-    margin-top: 30px
-.m-4
-    margin-top: 40px
