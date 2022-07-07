@@ -21,18 +21,40 @@ footer
                 margin-left: 48px
     .bottom
         position: relative
-        height: 88px
+        @media only screen and (min-width: $deskop)
+            height: 88px
+        @media only screen and (max-width: $mobile)
+            height: 200px
         .left
-            position: absolute
-            left: 10%
-            top: 50%
-            transform: translateY(-50%)
+            @media only screen and (min-width: $deskop)
+                position: absolute
+                left: 10%
+                top: 50%
+                transform: translateY(-50%)
+            @media only screen and (max-width: $mobile)
+                position: absolute
+                left: 50%
+                top: 33.5%
+                transform: translate(-50%, -50%)
             ul > li
-                display: inline
-                margin-right: 48px
+                list-style: none
+                @media only screen and (max-width: $mobile)
+                    text-align: center
+                    margin: 15px
+                @media only screen and (min-width: $deskop)
+                    margin-right: 48px
+                    display: inline
         .right
-            position: absolute
-            right: 10%
-            top: 50%
-            transform: translateY(-50%)
-            cursor: pointer
+            @media only screen and (min-width: $deskop)
+                position: absolute
+                right: 10%
+                top: 50%
+                transform: translateY(-50%)
+                cursor: pointer
+            @media only screen and (max-width: $mobile)
+                position: absolute
+                left: 50%
+                top: 80%
+                transform: translate(-50%, -50%)
+                cursor: pointer
+
