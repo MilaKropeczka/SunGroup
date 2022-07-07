@@ -1,0 +1,48 @@
+section.write-us
+    position: relative
+    background-color: $white
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    .left
+        overflow: hidden
+        .box
+            overflow: hidden
+            position: relative
+            border-radius: 8px
+            margin: 16px
+            max-width: 664px
+            background-color: $primary-50
+            @media only screen and (min-width: $deskop)
+                padding: 48px
+                height: 686px
+            @media only screen and (max-width: $mobile)
+                height: 740px
+            h2
+                @media only screen and (max-width: $mobile)
+                    text-align: center
+                    margin: 15px
+
+            .wrapper
+                @media only screen and (min-width: $deskop)
+                    display: grid
+                    grid-template-columns: 1fr 1fr
+            #message
+                // max-width: 550px
+            button
+                position: absolute
+                margin: 48px
+                right: 0px
+    .right
+        overflow: hidden
+        .box
+            overflow: hidden
+            border-radius: 8px
+            margin: 16px
+            @media only screen and (min-width: $deskop)
+                height: 686px
+                max-width: 664px
+            @media only screen and (max-width: $mobile)
+                height: 686px
+                min-width: 200px
+                max-width: 100%

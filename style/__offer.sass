@@ -1,0 +1,77 @@
+.section-offer
+    background-color: #fff
+    display: grid
+    overflow: hidden
+    grid-template-columns: 1fr
+    @media only screen and (min-width: $deskop)
+        height: 2833px
+        grid-template-rows: repeat(4, 1fr)
+    @media only screen and (max-width: $mobile)
+        grid-template-rows: repeat(3, 1fr)
+    .items
+        display: grid
+        @media only screen and (min-width: $deskop)
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr
+        @media only screen and (max-width: $mobile)
+            grid-template-columns: 1fr
+        .left
+            overflow: hidden
+            position: relative
+            @media only screen and (min-width: $deskop)
+                border-radius: 8px
+                grid-column: 1/2
+                margin: 50px 100px
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        .right
+            border-radius: 8px
+            overflow: hidden
+            position: relative
+            @media only screen and (min-width: $deskop)
+                grid-column: 2/3
+                margin: 50px 100px
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+                text-align: center
+        #right
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        #left
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+                text-align: center
+        .box
+            @media only screen and (max-width: $deskop)
+                max-width: 553px
+    .item4
+        display: grid
+        justify-content: center
+        overflow: hidden
+        .box
+            position: relative
+            max-width: 900px
+            text-align: center
+            @media only screen and (min-width: $deskop)
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            img
+                border-radius: 50%
+.section-offer .box > *
+    margin: 15px
+    img.image
+        border-radius: 8px
+        @media only screen and (min-width: $deskop)
+            margin: 128px 60px
+            height: 548px
+            width: 548px
+.section-offer .items > *
+    display: grid
+    justify-content: center
+
+.section-offer div > img
+    @media only screen and (max-width: $mobile)
+        max-height: 800px
+    @media only screen and (max-width: $small_mobile)
+        max-height: 400px

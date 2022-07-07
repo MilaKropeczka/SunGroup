@@ -1,0 +1,61 @@
+footer
+    background-color: $grey-50
+    // height: 192px
+    .top
+        height: 104px
+        div
+            position: relative
+            height: 100px
+            width: 80%
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            margin: 0 auto
+            img
+                @media only screen and (min-width: $deskop)
+                    position: absolute
+                    top: 50%
+                    left: 0
+                    transform: translateY(-50%)
+            ul > li
+                display: inline
+                margin-left: 48px
+    .bottom
+        position: relative
+        @media only screen and (min-width: $deskop)
+            height: 88px
+        @media only screen and (max-width: $mobile)
+            height: 300px
+        .left
+            @media only screen and (min-width: $deskop)
+                position: absolute
+                left: 10%
+                top: 50%
+                transform: translateY(-50%)
+            @media only screen and (max-width: $mobile)
+                position: absolute
+                left: 50%
+                top: 33.5%
+                transform: translate(-50%, -50%)
+            ul > li
+                list-style: none
+                @media only screen and (max-width: $mobile)
+                    text-align: center
+                    margin: 15px
+                @media only screen and (min-width: $deskop)
+                    margin-right: 48px
+                    display: inline
+        .right
+            @media only screen and (min-width: $deskop)
+                position: absolute
+                right: 10%
+                top: 50%
+                transform: translateY(-50%)
+                cursor: pointer
+            @media only screen and (max-width: $mobile)
+                position: absolute
+                left: 50%
+                top: 80%
+                transform: translate(-50%, -50%)
+                cursor: pointer
+

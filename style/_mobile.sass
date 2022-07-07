@@ -1,0 +1,39 @@
+// max width MOBILE
+$mobile: 1200px
+// min width DESKOP +1px
+$deskop: 1201px
+//max width SMALL MOBILE
+$small_mobile: 500px
+
+.white
+    color: $white
+
+.hidden-deskop
+    @media only screen and (min-width: $deskop)
+        display: none
+
+.position-center
+    @media only screen and (min-width: $deskop)
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+.position-center-x
+    @media only screen and (min-width: $deskop)
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+
+.grey-700
+    color: $grey-700
+
+.hidden-mobile
+    @media only screen and (max-width: $mobile)
+        display: none
+
+.grey-600
+    color: $grey-600
+
+.m-1
+    margin-top: 10px

@@ -1,0 +1,74 @@
+.iconBox
+    position: relative
+    width: 56px
+    height: 56px
+    border-radius: 56px
+    background-color: $primary-100
+.iconBox::after
+    content: url("../img/Icon/24x24/Placeholder.png")
+    display: block
+    width: 21px
+    height: 21px
+    border-radius: 21px
+    position: absolute
+    top: 48%
+    left: 48%
+    transform: translate(-50%, -50%)
+
+.container-about
+    display: grid
+    min-height: 542px
+    width: 100%
+    grid-template-row: repeat(2, 1fr)
+    .top
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 276px
+        grid-row: 1/2
+    .bottom
+        display: grid
+        @media only screen and (min-width: $deskop)
+            grid-template-columns: repeat(3, 1fr)
+            height: 266px
+            grid-row: 2/3
+        @media only screen and (max-width: $mobile)
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, 1fr)
+        .items
+            display: grid
+            grid-template-columns: 80px 1fr
+            margin: 0 auto
+            min-height: 124px
+            // height: 124px
+            min-width: 200px
+            max-width: 432px
+        .items > *
+            @media only screen and (max-width: $mobile)
+                margin-bottom: 50px
+            .left
+                height: 100%
+                grid-column: 1/2
+            .right
+                height: 100%
+                grid-column: 2/3
+        .item1
+            @media only screen and (min-width: $deskop)
+                grid-column: 1/2
+            @media only screen and (max-width: $mobile)
+                grid-row: 1/2
+        .item2
+            @media only screen and (min-width: $deskop)
+                grid-column: 2/3
+            @media only screen and (max-width: $mobile)
+                grid-row: 2/3
+        .item3
+            @media only screen and (min-width: $deskop)
+                grid-column: 3/4
+            @media only screen and (max-width: $mobile)
+                grid-row: 3/4
+.center-text
+    text-align: center
+
+.margin-top
+    margin-top: 15px
