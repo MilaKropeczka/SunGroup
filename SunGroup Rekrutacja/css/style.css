@@ -686,7 +686,6 @@ header .right img {
 @media only screen and (max-width: 800px) {
   .section-offer {
     grid-template-rows: repeat(3, 1fr);
-    padding: 100px 0;
   }
 }
 .section-offer .items {
@@ -705,6 +704,7 @@ header .right img {
   }
 }
 .section-offer .items .left {
+  overflow: hidden;
   position: relative;
 }
 @media only screen and (min-width: 801px) {
@@ -718,6 +718,7 @@ header .right img {
   }
 }
 .section-offer .items .right {
+  overflow: hidden;
   position: relative;
 }
 @media only screen and (min-width: 801px) {
@@ -730,18 +731,29 @@ header .right img {
     grid-row: 1/2;
   }
 }
+.section-offer .items #right {
+  overflow: hidden;
+}
 @media only screen and (max-width: 800px) {
   .section-offer .items #right {
     grid-row: 2/3;
   }
+}
+.section-offer .items #left {
+  overflow: hidden;
 }
 @media only screen and (max-width: 800px) {
   .section-offer .items #left {
     grid-row: 1/2;
   }
 }
-.section-offer .items .box {
-  max-width: 553px;
+@media only screen and (max-width: 801px) {
+  .section-offer .items .box {
+    max-width: 553px;
+  }
+}
+.section-offer .item4 {
+  overflow: hidden;
 }
 .section-offer .item4 .box {
   position: relative;
@@ -770,6 +782,7 @@ header .right img {
     width: 548px;
   }
 }
+
 .section-offer .items > * {
   display: grid;
   -webkit-box-pack: center;

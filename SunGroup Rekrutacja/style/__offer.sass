@@ -8,8 +8,6 @@
         grid-template-rows: repeat(4, 1fr)
     @media only screen and (max-width: $mobile)
         grid-template-rows: repeat(3, 1fr)
-        padding: 100px 0
-
     .items
         display: grid
         @media only screen and (min-width: $deskop)
@@ -19,27 +17,32 @@
             grid-template-columns: 1fr
             grid-template-rows: 320px 1fr
         .left
+            overflow: hidden
             position: relative
             @media only screen and (min-width: $deskop)
                 grid-column: 1/2
             @media only screen and (max-width: $mobile)
                 grid-row: 2/3
         .right
+            overflow: hidden
             position: relative
             @media only screen and (min-width: $deskop)
                 grid-column: 2/3
             @media only screen and (max-width: $mobile)
                 grid-row: 1/2
         #right
+            overflow: hidden
             @media only screen and (max-width: $mobile)
                 grid-row: 2/3
         #left
+            overflow: hidden
             @media only screen and (max-width: $mobile)
                 grid-row: 1/2
         .box
-            max-width: 553px
-            @media only screen and (max-width: $mobile)
+            @media only screen and (max-width: $deskop)
+                max-width: 553px
     .item4
+        overflow: hidden
         .box
             position: relative
             max-width: 900px
@@ -57,9 +60,6 @@
             margin: 128px 60px
             height: 548px
             width: 548px
-        @media only screen and (max-width: $mobile)
-            // height: 100%
-            // width: 100%
 .section-offer .items > *
     display: grid
     justify-content: center
