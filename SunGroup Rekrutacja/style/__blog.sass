@@ -5,7 +5,11 @@ section.blog
     h2
         position: absolute
         left: 15%
+        @media only screen and (max-width: $mobile)
+            left: 12%
     button
         position: absolute
         right: 15%
+        @media only screen and (max-width: $mobile)
+            right: 12%
 //blog use _cards.sass

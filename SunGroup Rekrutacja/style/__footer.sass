@@ -1,6 +1,6 @@
 footer
     background-color: $grey-50
-    height: 192px
+    // height: 192px
     .top
         height: 104px
         div
@@ -12,10 +12,11 @@ footer
             justify-content: flex-end
             margin: 0 auto
             img
-                position: absolute
-                top: 50%
-                left: 0
-                transform: translateY(-50%)
+                @media only screen and (min-width: $deskop)
+                    position: absolute
+                    top: 50%
+                    left: 0
+                    transform: translateY(-50%)
             ul > li
                 display: inline
                 margin-left: 48px
@@ -24,7 +25,7 @@ footer
         @media only screen and (min-width: $deskop)
             height: 88px
         @media only screen and (max-width: $mobile)
-            height: 200px
+            height: 300px
         .left
             @media only screen and (min-width: $deskop)
                 position: absolute

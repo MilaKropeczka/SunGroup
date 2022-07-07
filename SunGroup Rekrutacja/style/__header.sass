@@ -3,27 +3,31 @@ header
     display: grid
     @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
-        // grid-template-row: 1fr 1fr
         grid-template-row: 1fr
         height: 800px
     @media only screen and (min-width: $deskop)
         grid-template-columns: 1fr 1fr
         grid-template-row: 1fr
         height: 800px
-    .header-left
+    .left
         position: relative
         background-color: $grey-900
         @media only screen and (min-width: $deskop)
             grid-column: 1/2
         @media only screen and (max-width: $mobile)
-            // grid-row: 2/3
             grid-row: 1/2
             padding: 100px 0
         .box
             position: absolute
-            top: 50%
-            left: 50%
-            transform: translate(-50%, -50%)
+            @media only screen and (min-width: $deskop)
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            @media only screen and (max-width: $mobile)
+                text-align: center
+                top: 50%
+                transform: translateY(-50%)
+
         .box > *
             margin: 15px
     .right
@@ -36,7 +40,6 @@ header
         img
             position: absolute
         @media only screen and (min-width: $deskop)
-            // left: -200px
             width: calc(100vw -  50%)
 .white
     color: $white

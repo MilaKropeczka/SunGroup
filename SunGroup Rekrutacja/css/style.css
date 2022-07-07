@@ -194,12 +194,12 @@ hr {
 }
 
 .media > li {
-  margin: 10px;
+  display: inline;
   width: 40px;
   height: 40px;
   border-radius: 40px;
   position: relative;
-  float: left;
+  margin: 24px;
 }
 .media > li img {
   position: absolute;
@@ -351,14 +351,14 @@ section.cards {
       -ms-flex-pack: center;
           justify-content: center;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.cards {
     justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.cards {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -367,7 +367,7 @@ section.cards {
 section.cards .card {
   overflow: hidden;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.cards .card {
     width: 432px;
     height: 552px;
@@ -377,18 +377,18 @@ section.cards .card {
 section.cards .card img {
   border-radius: 8px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.cards .card img {
     min-height: 50%;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.cards .card img {
     height: 320px;
     min-width: 100%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.cards .card .card-body {
     text-align: center;
     margin: 30px;
@@ -401,39 +401,39 @@ section.cards .m-1 {
   margin-top: 10px;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   #card1 {
     grid-column: 1/2;
     grid-row: 1/2;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   #card1 {
     grid-column: 1/2;
     grid-row: 1/2;
   }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   #card2 {
     grid-column: 2/3;
     grid-row: 1/2;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   #card2 {
     grid-column: 1/2;
     grid-row: 2/3;
   }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   #card3 {
     grid-column: 3/4;
     grid-row: 1/2;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   #card3 {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -489,55 +489,67 @@ header {
   overflow: hidden;
   display: grid;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   header {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
     height: 800px;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   header {
     grid-template-columns: 1fr 1fr;
     grid-template-row: 1fr;
     height: 800px;
   }
 }
-header .header-left {
+header .left {
   position: relative;
   background-color: #242529;
 }
-@media only screen and (min-width: 801px) {
-  header .header-left {
+@media only screen and (min-width: 1201px) {
+  header .left {
     grid-column: 1/2;
   }
 }
-@media only screen and (max-width: 800px) {
-  header .header-left {
+@media only screen and (max-width: 1200px) {
+  header .left {
     grid-row: 1/2;
     padding: 100px 0;
   }
 }
-header .header-left .box {
+header .left .box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
-header .header-left .box > * {
+@media only screen and (min-width: 1201px) {
+  header .left .box {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header .left .box {
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+header .left .box > * {
   margin: 15px;
 }
 header .right {
   position: relative;
   overflow: hidden;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   header .right {
     grid-column: 2/3;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   header .right {
     grid-row: 1/2;
   }
@@ -545,7 +557,7 @@ header .right {
 header .right img {
   position: absolute;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   header .right {
     width: calc(100vw - 50%);
   }
@@ -598,14 +610,14 @@ header .right img {
 .container-about .bottom {
   display: grid;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .container-about .bottom {
     grid-template-columns: repeat(3, 1fr);
     height: 266px;
     grid-row: 2/3;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .container-about .bottom {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
@@ -619,7 +631,7 @@ header .right img {
   min-width: 200px;
   max-width: 432px;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .container-about .bottom .items > * {
     margin-bottom: 50px;
   }
@@ -632,32 +644,32 @@ header .right img {
   height: 100%;
   grid-column: 2/3;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .container-about .bottom .item1 {
     grid-column: 1/2;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .container-about .bottom .item1 {
     grid-row: 1/2;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .container-about .bottom .item2 {
     grid-column: 2/3;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .container-about .bottom .item2 {
     grid-row: 2/3;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .container-about .bottom .item3 {
     grid-column: 3/4;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .container-about .bottom .item3 {
     grid-row: 3/4;
   }
@@ -677,13 +689,13 @@ header .right img {
   overflow: hidden;
   grid-template-columns: 1fr;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer {
     height: 2833px;
     grid-template-rows: repeat(4, 1fr);
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer {
     grid-template-rows: repeat(3, 1fr);
   }
@@ -691,13 +703,13 @@ header .right img {
 .section-offer .items {
   display: grid;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer .items {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer .items {
     grid-template-columns: 1fr;
   }
@@ -706,52 +718,56 @@ header .right img {
   overflow: hidden;
   position: relative;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer .items .left {
+    border-radius: 8px;
     grid-column: 1/2;
+    margin: 50px 100px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer .items .left {
     grid-row: 2/3;
   }
 }
 .section-offer .items .right {
+  border-radius: 8px;
   overflow: hidden;
   position: relative;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer .items .right {
     grid-column: 2/3;
+    margin: 50px 100px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer .items .right {
     grid-row: 1/2;
+    text-align: center;
   }
 }
-.section-offer .items #right {
-  overflow: hidden;
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer .items #right {
     grid-row: 2/3;
   }
 }
-.section-offer .items #left {
-  overflow: hidden;
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .section-offer .items #left {
     grid-row: 1/2;
+    text-align: center;
   }
 }
-@media only screen and (max-width: 801px) {
+@media only screen and (max-width: 1201px) {
   .section-offer .items .box {
     max-width: 553px;
   }
 }
 .section-offer .item4 {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 .section-offer .item4 .box {
@@ -759,7 +775,7 @@ header .right img {
   max-width: 900px;
   text-align: center;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer .item4 .box {
     top: 50%;
     left: 50%;
@@ -774,7 +790,7 @@ header .right img {
 .section-offer .box > * img.image {
   border-radius: 8px;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .section-offer .box > * img.image {
     margin: 128px 60px;
     height: 548px;
@@ -789,7 +805,7 @@ header .right img {
           justify-content: center;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .position-center {
     position: absolute;
     top: 50%;
@@ -799,7 +815,7 @@ header .right img {
   }
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .position-center-x {
     position: absolute;
     left: 50%;
@@ -812,15 +828,26 @@ header .right img {
   color: #858993;
 }
 
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   .hidden-deskop {
     display: none;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .hidden-mobile {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .section-offer div > img {
+    max-height: 800px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .section-offer div > img {
+    max-height: 400px;
   }
 }
 
@@ -833,9 +860,19 @@ section.blog h2 {
   position: absolute;
   left: 15%;
 }
+@media only screen and (max-width: 1200px) {
+  section.blog h2 {
+    left: 12%;
+  }
+}
 section.blog button {
   position: absolute;
   right: 15%;
+}
+@media only screen and (max-width: 1200px) {
+  section.blog button {
+    right: 12%;
+  }
 }
 
 article {
@@ -869,6 +906,9 @@ section.other .box .item {
           transform: translate(-50%, -50%);
   max-width: 555px;
 }
+section.other .box button {
+  margin-bottom: 45px;
+}
 section.other .box * {
   margin: 15px;
 }
@@ -896,24 +936,24 @@ section.write-us .left .box {
   max-width: 664px;
   background-color: #F7F9FF;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.write-us .left .box {
     padding: 48px;
     height: 686px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.write-us .left .box {
     height: 740px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.write-us .left .box h2 {
     text-align: center;
     margin: 15px;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.write-us .left .box .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -932,13 +972,13 @@ section.write-us .right .box {
   border-radius: 8px;
   margin: 16px;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   section.write-us .right .box {
     height: 686px;
     max-width: 664px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   section.write-us .right .box {
     height: 686px;
     min-width: 200px;
@@ -948,7 +988,6 @@ section.write-us .right .box {
 
 footer {
   background-color: #F9F9FA;
-  height: 192px;
 }
 footer .top {
   height: 104px;
@@ -968,12 +1007,14 @@ footer .top div {
           justify-content: flex-end;
   margin: 0 auto;
 }
-footer .top div img {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+@media only screen and (min-width: 1201px) {
+  footer .top div img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 footer .top div ul > li {
   display: inline;
@@ -982,17 +1023,17 @@ footer .top div ul > li {
 footer .bottom {
   position: relative;
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   footer .bottom {
     height: 88px;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   footer .bottom {
-    height: 200px;
+    height: 300px;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   footer .bottom .left {
     position: absolute;
     left: 10%;
@@ -1001,7 +1042,7 @@ footer .bottom {
             transform: translateY(-50%);
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   footer .bottom .left {
     position: absolute;
     left: 50%;
@@ -1013,19 +1054,19 @@ footer .bottom {
 footer .bottom .left ul > li {
   list-style: none;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   footer .bottom .left ul > li {
     text-align: center;
     margin: 15px;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   footer .bottom .left ul > li {
     margin-right: 48px;
     display: inline;
   }
 }
-@media only screen and (min-width: 801px) {
+@media only screen and (min-width: 1201px) {
   footer .bottom .right {
     position: absolute;
     right: 10%;
@@ -1035,7 +1076,7 @@ footer .bottom .left ul > li {
     cursor: pointer;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   footer .bottom .right {
     position: absolute;
     left: 50%;
