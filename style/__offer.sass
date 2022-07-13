@@ -1,8 +1,9 @@
 .section-offer
     background-color: #fff
-    display: grid
+    // display: grid
     overflow: hidden
-    grid-template-columns: 1fr
+    // grid-template-columns: 1fr
+    +gridCenter
     @media only screen and (min-width: $deskop)
         height: 2833px
         grid-template-rows: repeat(4, 1fr)
@@ -21,7 +22,6 @@
             @media only screen and (min-width: $deskop)
                 border-radius: 8px
                 grid-column: 1/2
-                margin: 50px 100px
             @media only screen and (max-width: $mobile)
                 grid-row: 2/3
         .right
@@ -30,7 +30,6 @@
             position: relative
             @media only screen and (min-width: $deskop)
                 grid-column: 2/3
-                margin: 50px 100px
             @media only screen and (max-width: $mobile)
                 grid-row: 1/2
                 text-align: center
@@ -75,3 +74,15 @@
         max-height: 800px
     @media only screen and (max-width: $small_mobile)
         max-height: 400px
+
+.section-offer .img
+    background-size: cover
+    background-position: center
+    width: 548px
+    height: 548px
+#img_1
+    background-image: url(../img/Image@2x-5.jpg)
+#img_2
+    background-image: url(../img/Image@2x-4.jpg)
+#img_3
+    background-image: url(../img/Image@2x-3.jpg)

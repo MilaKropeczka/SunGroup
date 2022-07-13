@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,8 @@
     <nav>
         <div>
             <div class="nav_deskop">
-                <p class="hidden-deskop"><i class="fa-solid fa-bars"></i></p>
+                <p class="hidden-deskop"><i class="fa-solid fa-bars"></i>
+                </p>
                 <img src="./img/SunPage.svg" alt="Logo SunPage">
                 <ul class="hidden-mobile">
                     <li class="action action2 menu_button"><a href="#">O nas</a></li>
@@ -38,6 +39,7 @@
                 </ul>
             </div>
     </nav>
+
     <header>
         <div class="left">
             <div class="box">
@@ -51,7 +53,7 @@
             </div>
         </div>
         <div class="right hidden-mobile">
-            <img src="./img/ContactImage@2x.jpg" alt="Zdjęcie pracującej kobiety">
+            <div class="img"></div>
         </div>
     </header>
 
@@ -99,8 +101,7 @@
     <section class="section-offer">
         <div class="items item1">
             <div class="left">
-                <img class="image position-center-x" src="./img/Image@2x-5.jpg"
-                    alt="Zdjęcie przedstawiające ofetę produktu">
+                <div id="img_1" class="img"></div>
                 <br class="hidden-deskop">
                 <hr class="hidden-deskop">
                 <br class="hidden-deskop">
@@ -130,8 +131,7 @@
                 </div>
             </div>
             <div id="right" class="right">
-                <img class="image position-center-x" src="./img/Image@2x-4.jpg"
-                    alt="Zdjęcie przedstawiające ofetę produktu">
+                <div id="img_2" class="img"></div>
                 <br class="hidden-deskop">
                 <hr class="hidden-deskop">
                 <br class="hidden-deskop">
@@ -139,8 +139,7 @@
         </div>
         <div class="items item3">
             <div class="left">
-                <img class="image position-center-x" src="./img/Image@2x-3.jpg"
-                    alt="Zdjęcie przedstawiające ofetę produktu">
+                <div id="img_3" class="img"></div>
             </div>
             <div class="right">
                 <div class="box position-center">
@@ -179,67 +178,76 @@
                 <br>
             </div>
         </div>
-
     </section>
 
-    <section class="blog">
-        <h2>Blog</h2>
-        <button class="secondary_large">Zobacz więcej</button>
-    </section>
-    <section class="cards">
-        <div id="card1" class="card">
-            <div class="card-img-top">
-                <img src="./img/Image-2.jpg" alt="Tutaj opis obrazka">
-            </div>
-            <div class="card-body">
-                <p class="caption caption1 m-1">Kategoria</p>
-                <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
-                <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
-                    pleasure
-                    and
-                    praising pain.</p>
-                <p class="caption caption1 grey-600 m-1">13.12.2021</p>
-                <br class="hidden-deskop">
-                <hr class="hidden-deskop">
-                <br class="hidden-deskop">
-            </div>
-        </div>
-        <div id="card2" class="card">
-            <div class="card-img-top">
-                <img src="./img/Image-1.jpg" alt="Tutaj opis obrazka">
-            </div>
-            <div class="card-body">
-                <p class="caption caption1 m-1">Kategoria</p>
-                <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
-                <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
-                    pleasure
-                    and
-                    praising pain.</p>
-                <p class="caption caption1 grey-600 m-1">13.12.2021</p>
-                <br class="hidden-deskop">
-                <hr class="hidden-deskop">
-                <br class="hidden-deskop">
-            </div>
-        </div>
-        <div id="card3" class="card">
-            <div class="card-img-top">
-                <img src="./img/Image.jpg" alt="Tutaj opis obrazka">
-            </div>
-            <div class="card-body">
-                <p class="caption caption1 m-1">Kategoria</p>
-                <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
-                <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
-                    pleasure
-                    and
-                    praising pain.</p>
-                <p class="caption caption1 grey-600 m-1">13.12.2021</p>
-                <br class="hidden-deskop">
-                <hr class="hidden-deskop">
-                <br class="hidden-deskop">
-            </div>
-        </div>
+    <div class="box123">
+        <section class="blog">
+            <h2>Blog</h2>
+            <button class="secondary_large">Zobacz więcej</button>
+        </section>
 
-    </section>
+        <section class="cards">
+            <div id="card1" class="card">
+                <div class="card-img-top">
+                    <div class="img_blog" id="img_4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="caption caption1 m-1">Kategoria</p>
+                    <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
+                    <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and
+                        praising pain.</p>
+                    <p class="caption caption1 grey-600 m-1 date">
+                        <i class="icon"></i>
+                        13.12.2021
+                    </p>
+
+
+                    <br class="hidden-deskop">
+                    <hr class="hidden-deskop">
+                    <br class="hidden-deskop">
+                </div>
+            </div>
+            <div id="card2" class="card">
+                <div class="card-img-top">
+                    <div id="img_5" class="img_blog"></div>
+                </div>
+                <div class="card-body">
+                    <p class="caption caption1 m-1">Kategoria</p>
+                    <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
+                    <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and
+                        praising pain.</p>
+                    <p class="caption caption1 grey-600 m-1 date"><i class="icon"></i> 13.12.2021</p>
+                    <br class="hidden-deskop">
+                    <hr class="hidden-deskop">
+                    <br class="hidden-deskop">
+                </div>
+            </div>
+            <div id="card3" class="card">
+                <div class="card-img-top">
+                    <div id="img_6" class="img_blog"></div>
+                </div>
+                <div class="card-body">
+                    <p class="caption caption1 m-1">Kategoria</p>
+                    <h6 class="m-1">Intrygujący tytuł artykułu do przeczytania przez użytkownika</h6>
+                    <p class="body body1 m-1">But I must explain to you how all this mistaken idea of denouncing
+                        pleasure
+                        and
+                        praising pain.</p>
+                    <p class="caption caption1 grey-600 m-1 date">
+                        <i class="icon"></i>13.12.2021
+                    </p>
+                    <br class="hidden-deskop">
+                    <hr class="hidden-deskop">
+                    <br class="hidden-deskop">
+                </div>
+            </div>
+        </section>
+    </div>
+
     <section class="other">
         <div class="box">
             <div class="item">
@@ -253,6 +261,7 @@
             </div>
         </div>
     </section>
+
     <section class="write-us">
         <div class="left">
             <div class="box">
@@ -299,6 +308,7 @@
             </div>
         </div>
     </section>
+
     <footer>
         <div class="top">
             <div>

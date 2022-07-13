@@ -1,6 +1,8 @@
 header
     overflow: hidden
     display: grid
+    // overflow: hidden
+    // +gridCenter
     @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
         grid-template-row: 1fr
@@ -37,7 +39,9 @@ header
             grid-column: 2/3
         @media only screen and (max-width: $mobile)
             grid-row: 1/2
-        img
-            position: absolute
-        @media only screen and (min-width: $deskop)
-            width: calc(100vw -  50%)
+header .img
+    height: 100%
+    width: 100%
+    background-image: url(../img/Image@2x-6.jpg)
+    background-size: cover
+    background-position: center
