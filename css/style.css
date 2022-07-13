@@ -78,19 +78,12 @@ body {
   margin-top: 10px;
 }
 
-body {
-  display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1921px) {
   body {
-    grid-template-columns: minmax(1000px, 1919px);
-  }
-}
-@media only screen and (min-width: 1920px) {
-  body {
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     grid-template-columns: 1920px;
   }
 }
@@ -420,6 +413,7 @@ input[type=checkbox]:active::after {
 }
 
 section.cards {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,6 +428,11 @@ section.cards {
     width: 432px;
     height: 552px;
     margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1296px) and (max-width: 1450px) {
+  section.cards .card {
+    width: 360px;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -466,20 +465,10 @@ section .item4 .box * {
           justify-content: center;
 }
 
-@media only screen and (min-width: 1360px) {
-  .box123 {
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    grid-template-columns: 1360px;
-  }
-}
-
 .img_blog {
   background-size: cover;
   background-position: center;
-  width: 300px;
+  width: 100%;
   height: 320px;
   border-radius: 8px;
 }
@@ -587,7 +576,6 @@ nav .nav_deskop p i {
 }
 
 header {
-  overflow: hidden;
   display: grid;
 }
 @media only screen and (max-width: 1200px) {
@@ -624,6 +612,7 @@ header .left .box {
 }
 @media only screen and (min-width: 1201px) {
   header .left .box {
+    width: 553px;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -632,18 +621,16 @@ header .left .box {
 }
 @media only screen and (max-width: 1200px) {
   header .left .box {
-    text-align: center;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
   }
 }
 header .left .box > * {
-  margin: 15px;
+  margin: 23px;
 }
 header .right {
   position: relative;
-  overflow: hidden;
 }
 @media only screen and (min-width: 1201px) {
   header .right {
@@ -790,7 +777,6 @@ header .img {
 
 .section-offer {
   background-color: #fff;
-  overflow: hidden;
 }
 @media only screen and (min-width: 1360px) {
   .section-offer {
@@ -878,7 +864,6 @@ header .img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow: hidden;
 }
 .section-offer .item4 .box {
   position: relative;
@@ -949,27 +934,24 @@ header .img {
 }
 
 section.blog {
-  position: relative;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 208px;
-  top: 128px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
 }
-section.blog h2 {
-  position: absolute;
-  left: 15%;
-}
-@media only screen and (max-width: 1200px) {
-  section.blog h2 {
-    left: 12%;
+@media only screen and (min-width: 1360px) {
+  section.blog {
+    width: 1360px;
   }
 }
 section.blog button {
   position: absolute;
-  right: 15%;
-}
-@media only screen and (max-width: 1200px) {
-  section.blog button {
-    right: 12%;
-  }
+  right: 0;
 }
 
 article {
@@ -1026,7 +1008,6 @@ section.write-us .left {
   overflow: hidden;
 }
 section.write-us .left .box {
-  overflow: hidden;
   position: relative;
   border-radius: 8px;
   margin: 16px;
@@ -1061,11 +1042,7 @@ section.write-us .left .box button {
   margin: 48px;
   right: 0px;
 }
-section.write-us .right {
-  overflow: hidden;
-}
 section.write-us .right .box {
-  overflow: hidden;
   border-radius: 8px;
   margin: 16px;
 }

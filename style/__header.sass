@@ -1,8 +1,6 @@
 header
-    overflow: hidden
-    display: grid
     // overflow: hidden
-    // +gridCenter
+    display: grid
     @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
         grid-template-row: 1fr
@@ -22,19 +20,19 @@ header
         .box
             position: absolute
             @media only screen and (min-width: $deskop)
+                width: 553px
                 top: 50%
                 left: 50%
                 transform: translate(-50%, -50%)
             @media only screen and (max-width: $mobile)
-                text-align: center
                 top: 50%
                 transform: translateY(-50%)
 
         .box > *
-            margin: 15px
+            margin: 23px
     .right
         position: relative
-        overflow: hidden
+        // overflow: hidden
         @media only screen and (min-width: $deskop)
             grid-column: 2/3
         @media only screen and (max-width: $mobile)
