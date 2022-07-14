@@ -1,24 +1,35 @@
 nav
-    // overflow: hidden
+    height: 60px
+    background-color: $white
+    width: 100%
     @media only screen and (min-width: $deskop)
-        width: 100%
         height: 100px
-        background-color: $white
+    @media only screen and (max-width: $mobile)
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 1
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
     .nav_deskop
         position: relative
         width: 80%
-        height: 100px
         display: flex
         align-items: center
         justify-content: flex-end
         margin: 0 auto
+        @media only screen and (min-width: $deskop)
+            height: 100px
         @media only screen and (min-width: 1360px)
             width: 1360px
+        // @media only screen and (max-width: $mobile)
+        //     position: absolute
         img
             position: absolute
             top: 50%
             transform: translateY(-50%)
             @media only screen and (max-width: $mobile)
+                top: 30px
+                transform: translateY(-50%)
                 right: 0
             @media only screen and (min-width: $deskop)
                 left: 0
@@ -31,24 +42,32 @@ nav
             left: 0
             font-size: 30px
             cursor: pointer
-            padding: 40px
+            @media only screen and (max-width: $mobile)
+                top: 30px
+                transform: translateY(-50%)
             i
                 position: relative
                 cursor: pointer
 
+
 nav .nav_mobile
     @media only screen and (max-width: $mobile)
         background-color: $white
-        width: 250px
-        height: 300px
+        width: 100%
+        height: calc(100vh - 60px)
         position: absolute
-        top: 100px
-        left: -300px
+        top: 60px
+        left: -500px
         z-index: 1
+        transition: left .3s
+    ul
+        margin: 20px 12px 0 100px
     ul > li
         @media only screen and (max-width: $mobile)
-            margin: 40px
+            padding: 12px 0 22px 0
             list-style: none
+            font-size: 20px
+            font-weight: 600
 .show
     @media only screen and (max-width: $mobile)
         left: 0 !important
