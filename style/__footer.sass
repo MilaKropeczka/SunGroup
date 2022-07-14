@@ -1,7 +1,5 @@
 footer
-    // overflow: hidden
     background-color: $grey-50
-    // height: 192px
     .top
         height: 104px
         div
@@ -11,6 +9,9 @@ footer
             display: flex
             align-items: center
             justify-content: flex-end
+            @media only screen and (max-width: $mobile)
+                width: 100%
+                justify-content: center
             @media only screen and (min-width: $deskop)
                 margin: 0 auto
             img
@@ -37,9 +38,10 @@ footer
                 top: 50%
                 transform: translateY(-50%)
             @media only screen and (max-width: $mobile)
+                width: 100%
                 position: absolute
                 left: 50%
-                top: 33.5%
+                top: 40%
                 transform: translate(-50%, -50%)
             ul > li
                 list-style: none

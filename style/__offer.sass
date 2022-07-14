@@ -1,8 +1,5 @@
 .section-offer
     background-color: #fff
-    // display: grid
-    // overflow: hidden
-    // grid-template-columns: 1fr
     +gridCenter
     @media only screen and (min-width: $deskop)
         height: 2833px
@@ -16,10 +13,22 @@
             grid-template-rows: 1fr
         @media only screen and (max-width: $mobile)
             grid-template-columns: 1fr
+        h2
+            margin-bottom: 20px
+            margin-top: 12px
+        p.offer
+            line-height: 18px
+            margin-bottom: 32px
+            @media only screen and (min-width: $deskop)
+                line-height: 28px
+                width: 548px
         .left
             overflow: hidden
             position: relative
             @media only screen and (min-width: $deskop)
+                display: flex
+                align-items: center
+                justify-content: flex-start
                 border-radius: 8px
                 grid-column: 1/2
             @media only screen and (max-width: $mobile)
@@ -28,8 +37,14 @@
             border-radius: 8px
             overflow: hidden
             position: relative
+            margin: 20px 0
+            // width: 100%
             @media only screen and (min-width: $deskop)
+                width: 548px
                 grid-column: 2/3
+                display: flex
+                align-items: center
+                margin: 0 auto
             @media only screen and (max-width: $mobile)
                 grid-row: 1/2
                 text-align: center
@@ -42,7 +57,7 @@
                 text-align: center
         .box
             @media only screen and (max-width: $deskop)
-                max-width: 553px
+                max-width: 548px
     .item4
         display: grid
         justify-content: center
@@ -57,8 +72,6 @@
                 transform: translate(-50%, -50%)
             img
                 border-radius: 50%
-.section-offer .box > *
-    margin: 15px
     img.image
         border-radius: 8px
         @media only screen and (min-width: $deskop)
