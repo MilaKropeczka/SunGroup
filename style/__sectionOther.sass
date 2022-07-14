@@ -1,7 +1,7 @@
 section.other
-    // overflow: hidden
     height: 536px
     .box
+        overflow: hidden
         position: relative
         margin: 0 auto
         height: 408px
@@ -9,12 +9,17 @@ section.other
         background-color: $grey-900
         text-align: center
         border-radius: 8px
+        @media only screen and (max-width: $mobile)
+            text-align: left
+            border-radius: 0
         .item
             position: absolute
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
             max-width: 555px
+            @media only screen and (max-width: $mobile)
+                width: 100%
         button
             margin-bottom: 45px
     .box *
