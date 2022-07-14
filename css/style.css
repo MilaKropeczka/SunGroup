@@ -481,7 +481,6 @@ input[type=checkbox]:active::after {
 }
 
 section.cards {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,6 +490,17 @@ section.cards {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 10px 20px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1200px) {
+  section.cards {
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 1360px) {
+  section.cards {
+    width: 1360px;
+  }
 }
 @media only screen and (min-width: 1201px) {
   section.cards .card {
@@ -647,7 +657,7 @@ nav .nav_deskop p i {
     height: calc(100vh - 60px);
     position: absolute;
     top: 60px;
-    left: -500px;
+    left: -1200px;
     z-index: 1;
     -webkit-transition: left 0.3s;
     transition: left 0.3s;
@@ -947,6 +957,11 @@ header .img {
 @media only screen and (max-width: 1200px) {
   .section-offer .items {
     grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .section-offer .items .img {
+    height: 350px;
   }
 }
 .section-offer .items h2 {

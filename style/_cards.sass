@@ -1,9 +1,13 @@
 section.cards
-    overflow: hidden
     display: flex
     flex-wrap: wrap
     justify-content: center
     padding: 10px 20px
+    margin: 0 auto
+    @media only screen and (max-width: $mobile)
+        overflow: hidden
+    @media only screen and (min-width: 1360px)
+        width: 1360px
     .card
         @media only screen and (min-width: $deskop)
             width: 432px
