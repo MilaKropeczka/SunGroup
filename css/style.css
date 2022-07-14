@@ -550,7 +550,11 @@ section .item4 .box * {
   background-position: center;
   width: 100%;
   height: 320px;
-  border-radius: 8px;
+}
+@media only screen and (min-width: 550px) {
+  .img_blog {
+    border-radius: 8px;
+  }
 }
 @media only screen and (min-width: 432px) {
   .img_blog {
@@ -697,7 +701,8 @@ header {
   header {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
-    height: 800px;
+    height: 600px;
+    margin-top: 60px;
   }
 }
 @media only screen and (min-width: 1201px) {
@@ -1208,14 +1213,13 @@ section.other .box {
 }
 @media only screen and (max-width: 1200px) {
   section.other .box {
-    text-align: left;
     border-radius: 0;
   }
 }
 section.other .box .item {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: calc(50% - 20px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-width: 555px;
@@ -1223,6 +1227,23 @@ section.other .box .item {
 @media only screen and (max-width: 1200px) {
   section.other .box .item {
     width: 100%;
+  }
+}
+section.other .box .item h2 {
+  line-height: 48px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 1200px) {
+  section.other .box .item h2 {
+    line-height: 28px;
+  }
+}
+section.other .box .item p.text {
+  line-height: 28px;
+}
+@media only screen and (max-width: 1200px) {
+  section.other .box .item p.text {
+    line-height: 18px;
   }
 }
 section.other .box button {
@@ -1262,7 +1283,7 @@ section.write-us .left .box {
 }
 @media only screen and (max-width: 1200px) {
   section.write-us .left .box {
-    height: 740px;
+    height: 800px;
   }
 }
 @media only screen and (max-width: 1200px) {

@@ -3,10 +3,9 @@ header
     display: grid
     @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
-        // grid-template-columns: 400px
-        // width: 100%
         grid-template-row: 1fr
-        height: 800px
+        height: 600px
+        margin-top: 60px
     @media only screen and (min-width: $deskop)
         grid-template-columns: 1fr 1fr
         grid-template-row: 1fr
@@ -37,7 +36,6 @@ header
             margin: 23px
     .right
         position: relative
-        // overflow: hidden
         @media only screen and (min-width: $deskop)
             grid-column: 2/3
         @media only screen and (max-width: $mobile)

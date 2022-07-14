@@ -10,16 +10,25 @@ section.other
         text-align: center
         border-radius: 8px
         @media only screen and (max-width: $mobile)
-            text-align: left
             border-radius: 0
         .item
             position: absolute
             top: 50%
-            left: 50%
+            left: calc(50% -  20px)
             transform: translate(-50%, -50%)
             max-width: 555px
             @media only screen and (max-width: $mobile)
                 width: 100%
+            h2
+                line-height: 48px
+                margin-bottom: 20px
+                @media only screen and (max-width: $mobile)
+                    line-height: 28px
+            p.text
+                line-height: 28px
+                @media only screen and (max-width: $mobile)
+                    line-height: 18px
+
         button
             margin-bottom: 45px
     .box *
