@@ -130,6 +130,7 @@ h1 {
 h2 {
   font-size: 32px;
   line-height: 48px;
+  color: #242529;
 }
 @media only screen and (max-width: 1200px) {
   h2 {
@@ -489,7 +490,6 @@ section.cards {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 10px 20px;
   margin: 0 auto;
 }
 @media only screen and (max-width: 1200px) {
@@ -514,7 +514,14 @@ section.cards {
     width: 360px;
   }
 }
+section.cards h6, section.cards p.body1 {
+  color: #242529;
+}
+
 p.date {
+  font-family: "Poppins";
+  color: #9BA0AC;
+  font-weight: 500;
   left: 25px;
   position: relative;
 }
@@ -664,14 +671,15 @@ nav .nav_deskop p i {
   }
 }
 nav .nav_mobile ul {
-  margin: 20px 12px 0 100px;
+  margin: calc(50vh - 30px - 161px) 12px 0 0px;
 }
 @media only screen and (max-width: 1200px) {
   nav .nav_mobile ul > li {
     padding: 12px 0 22px 0;
     list-style: none;
     font-size: 20px;
-    font-weight: 600;
+    text-align: center;
+    font-weight: 400;
   }
 }
 
@@ -858,6 +866,7 @@ header .img {
 }
 .container-about .bottom .items h6 {
   line-height: 24px;
+  color: #242529;
 }
 @media only screen and (min-width: 1201px) {
   .container-about .bottom .items h6 {
@@ -969,6 +978,7 @@ header .img {
   margin-top: 12px;
 }
 .section-offer .items p.offer {
+  color: #242529;
   line-height: 18px;
   margin-bottom: 32px;
 }
@@ -1065,14 +1075,24 @@ header .img {
   border-radius: 50%;
   width: 46px;
   height: 46px;
+  margin: 10px;
+  margin-top: 30px;
 }
 @media only screen and (min-width: 1201px) {
   .section-offer .item4 .box p {
     width: 900px;
   }
 }
+.section-offer .item4 p.caption {
+  font-weight: 500;
+  font-family: "Poppins";
+}
+.section-offer .item4 h2 {
+  color: #242529;
+}
 .section-offer .item4 blockquote p {
   line-height: 18px;
+  color: #242529;
 }
 @media only screen and (min-width: 1201px) {
   .section-offer .item4 blockquote p {
@@ -1080,7 +1100,17 @@ header .img {
   }
 }
 .section-offer .item4 blockquote cite {
+  color: #242529;
   font-style: normal;
+  line-height: 30px;
+  font-size: 18px;
+}
+.section-offer .item4 blockquote .grey-700 {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 28px;
+  color: #858993;
 }
 .section-offer img.image {
   border-radius: 8px;
@@ -1241,6 +1271,11 @@ section.write-us .left .box {
     padding: 25px;
   }
 }
+section.write-us .left .box form p {
+  color: #242529;
+  font-size: 14px;
+  line-height: 26px;
+}
 @media only screen and (min-width: 1201px) {
   section.write-us .left .box .wrapper {
     display: grid;
@@ -1354,6 +1389,7 @@ footer .bottom {
   }
 }
 footer .bottom .left ul > li {
+  color: #858993;
   list-style: none;
 }
 @media only screen and (max-width: 1200px) {

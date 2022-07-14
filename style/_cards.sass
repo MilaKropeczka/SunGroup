@@ -2,7 +2,6 @@ section.cards
     display: flex
     flex-wrap: wrap
     justify-content: center
-    padding: 10px 20px
     margin: 0 auto
     @media only screen and (max-width: $mobile)
         overflow: hidden
@@ -18,7 +17,13 @@ section.cards
         .card-body
             @media only screen and (max-width: $mobile)
                 // margin: 30px
+    h6, p.body1
+        color: $grey-900
+
 p.date
+    font-family: 'Poppins'
+    color: $grey-600
+    font-weight: 500
     left: 25px
     position: relative
 i.icon::before
