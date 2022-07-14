@@ -1,4 +1,5 @@
 section.write-us
+    // overflow: hidden
     position: relative
     background-color: $white
     display: flex
@@ -7,7 +8,7 @@ section.write-us
     .left
         overflow: hidden
         .box
-            overflow: hidden
+            // overflow: hidden
             position: relative
             border-radius: 8px
             margin: 16px
@@ -21,7 +22,7 @@ section.write-us
             h2
                 @media only screen and (max-width: $mobile)
                     text-align: center
-                    margin: 15px
+                    padding: 25px
 
             .wrapper
                 @media only screen and (min-width: $deskop)
@@ -34,9 +35,7 @@ section.write-us
                 margin: 48px
                 right: 0px
     .right
-        overflow: hidden
         .box
-            overflow: hidden
             border-radius: 8px
             margin: 16px
             @media only screen and (min-width: $deskop)

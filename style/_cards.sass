@@ -1,16 +1,19 @@
 section.cards
+    overflow: hidden
     display: flex
     flex-wrap: wrap
     justify-content: center
+    padding: 10px 20px
     .card
-        // width: 300px
         @media only screen and (min-width: $deskop)
             width: 432px
             height: 552px
             margin: 0 auto
+        @media only screen and (min-width: 1296px) and (max-width: 1450px)
+            width: 360px
         .card-body
             @media only screen and (max-width: $mobile)
-                margin: 30px
+                // margin: 30px
 p.date
     left: 25px
     position: relative
@@ -20,19 +23,17 @@ i.icon::before
     content: url(../img/Icon/20x20/calendar.svg)
 
 section .item4 .box *
-        margin: 10px
+    margin: 10px
 
 .card > .card-img-top
     display: flex
     justify-content: center
 
-.box123
-    +gridCenter
-
 .img_blog
     background-size: cover
     background-position: center
-    width: 300px
+    // width: 300px
+    width: 100%
     height: 320px
     border-radius: 8px
     @media only screen and (min-width: 432px)
