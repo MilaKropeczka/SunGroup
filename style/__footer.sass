@@ -11,7 +11,8 @@ footer
             display: flex
             align-items: center
             justify-content: flex-end
-            margin: 0 auto
+            @media only screen and (min-width: $deskop)
+                margin: 0 auto
             img
                 @media only screen and (min-width: $deskop)
                     position: absolute
@@ -21,6 +22,8 @@ footer
             ul > li
                 display: inline
                 margin-left: 48px
+                @media only screen and (max-width: $mobile)
+                    margin-left: 15px
     .bottom
         position: relative
         @media only screen and (min-width: $deskop)

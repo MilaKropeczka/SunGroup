@@ -190,7 +190,7 @@ h6, .subheader {
 }
 @media only screen and (max-width: 1200px) {
   .action, .caption {
-    font-size: 19px;
+    line-height: 19px;
   }
 }
 
@@ -199,7 +199,7 @@ h6, .subheader {
 }
 @media only screen and (max-width: 1200px) {
   .h6, .body1 {
-    line-height: 54px;
+    line-height: 20px;
   }
 }
 
@@ -494,12 +494,6 @@ section.cards {
     width: 360px;
   }
 }
-@media only screen and (max-width: 1200px) {
-  section.cards .card .card-body {
-    margin: 30px;
-  }
-}
-
 p.date {
   left: 25px;
   position: relative;
@@ -1102,7 +1096,7 @@ section.write-us .left .box {
 @media only screen and (max-width: 1200px) {
   section.write-us .left .box h2 {
     text-align: center;
-    margin: 15px;
+    padding: 25px;
   }
 }
 @media only screen and (min-width: 1201px) {
@@ -1153,7 +1147,11 @@ footer .top div {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 0 auto;
+}
+@media only screen and (min-width: 1201px) {
+  footer .top div {
+    margin: 0 auto;
+  }
 }
 @media only screen and (min-width: 1201px) {
   footer .top div img {
@@ -1167,6 +1165,11 @@ footer .top div {
 footer .top div ul > li {
   display: inline;
   margin-left: 48px;
+}
+@media only screen and (max-width: 1200px) {
+  footer .top div ul > li {
+    margin-left: 15px;
+  }
 }
 footer .bottom {
   position: relative;
