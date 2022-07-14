@@ -250,7 +250,7 @@
     <section class="other">
         <div class="box">
             <div class="item">
-                <p class="white">Overline</p>
+                <p class="white poppins">Overline</p>
                 <h2 class="white">Przekonujący nagłówek w CTA</h2>
                 <p class="white text">But I must explain to you how all this mistaken idea of denouncing pleasure and
                     praising
@@ -264,26 +264,29 @@
     <section class="write-us">
         <div class="left">
             <div class="box">
-                <h2>Napisz do nas</h2>
-                <form>
+                <h3>Napisz do nas</h3>
+                <form id="writeUs">
                     <div class="wrapper">
                         <div class="form formInput">
-                            <input type="text" id="name" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="text" pattern="[a-zA-Z'-'\s]*" id="name" class="form__input" autocomplete="off"
+                                placeholder=" " minlength="3" maxlength="32" required>
                             <label for="name" class="form__label">Imię</label>
                         </div>
-
                         <div class="form formInput">
-                            <input type="text" id="surname" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="text" pattern="[a-zA-Z'-'\s]*" id="surname" class="form__input"
+                                autocomplete="off" placeholder=" " minlength="3" maxlength="32" required>
                             <label for="surname" class="form__label">Nazwisko</label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="form formInput">
-                            <input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email"
+                                class="form__input" autocomplete="off" placeholder=" " required>
                             <label for="email" class="form__label">Adres e-mail</label>
                         </div>
                         <div class="form formInput">
-                            <input type="text" id="number" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="tel" pattern="(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}" id="number"
+                                class="form__input" autocomplete="off" placeholder=" " maxlength="11" required>
                             <label for="number" class="form__label">Numer telefonu</label>
                         </div>
                     </div>
@@ -294,11 +297,14 @@
                         <label for="message" class="form__label">Twoja wiadomość</label>
                     </div>
 
-                    <p> <input type="checkbox" name="rule" id="rule">Zapoznałem się z regulaminem i wyrażam zgodę na
-                        przetwarzanie moich danych osobowych przez
-                        Sungroup.pl</p>
+                    <p> <input type="checkbox" name="rule" id="rule">
+                        <label for="rule">
+                            Zapoznałem się z regulaminem i wyrażam zgodę na
+                            przetwarzanie moich danych osobowych przez
+                            Sungroup.pl</label>
+                    </p>
                     <br>
-                    <button class="primary_large">Wyślij wiadomość</button>
+                    <button id="formBtn" class="primary_large">Wyślij wiadomość</button>
                 </form>
             </div>
         </div>

@@ -293,6 +293,7 @@ a:active {
   border-radius: 4px;
   border: 2px solid #6E9EFF;
   color: #6E9EFF;
+  font-family: "Poppins";
 }
 
 .secondary_large:hover {
@@ -425,11 +426,11 @@ hr {
   left: 15px;
 }
 
-.error:focus {
+.error {
   border: 2px solid #C90D0D !important;
 }
 
-.success:focus {
+.success {
   border: 2px solid #329F32 !important;
 }
 
@@ -439,6 +440,21 @@ hr {
 
 textarea {
   resize: none;
+  line-height: 28px;
+}
+@media only screen and (max-width: 1200px) {
+  textarea {
+    line-height: 20px;
+  }
+}
+
+input {
+  line-height: 28px;
+}
+@media only screen and (max-width: 1200px) {
+  input {
+    line-height: 20px;
+  }
 }
 
 input[type=checkbox] {
@@ -481,6 +497,10 @@ input[type=checkbox]:active::after {
   opacity: 50%;
 }
 
+.errorCheckbox {
+  outline: 2px solid red;
+}
+
 section.cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -513,6 +533,9 @@ section.cards {
   section.cards .card {
     width: 360px;
   }
+}
+section.cards .card .card-body p.caption {
+  font-family: "Poppins";
 }
 section.cards h6, section.cards p.body1 {
   color: #242529;
@@ -700,8 +723,8 @@ header {
 @media only screen and (max-width: 1200px) {
   header {
     grid-template-columns: 1fr;
-    grid-template-row: 1fr;
-    height: 600px;
+    grid-template-row: 500px 400px;
+    height: 900px;
     margin-top: 60px;
   }
 }
@@ -723,8 +746,8 @@ header .left {
 }
 @media only screen and (max-width: 1200px) {
   header .left {
-    grid-row: 1/2;
-    padding: 100px 0;
+    grid-row: 2/3;
+    padding: 230px 0;
   }
 }
 header .left .box {
@@ -768,6 +791,7 @@ header .right {
 @media only screen and (max-width: 1200px) {
   header .right {
     grid-row: 1/2;
+    height: 450px;
   }
 }
 
@@ -1058,6 +1082,9 @@ header .img {
     max-width: 548px;
   }
 }
+.section-offer .items p.caption {
+  font-family: "Poppins";
+}
 .section-offer .item4 {
   display: grid;
   -webkit-box-pack: center;
@@ -1246,6 +1273,13 @@ section.other .box .item p.text {
     line-height: 18px;
   }
 }
+section.other .box .item p.poppins {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 14px;
+  list-height: 24px;
+  letter-spacing: 1px;
+}
 section.other .box button {
   margin-bottom: 45px;
 }
@@ -1286,8 +1320,14 @@ section.write-us .left .box {
     height: 800px;
   }
 }
+section.write-us .left .box h3 {
+  line-height: 42px;
+  color: #242529;
+  padding: 0 0 30px 20px;
+}
 @media only screen and (max-width: 1200px) {
-  section.write-us .left .box h2 {
+  section.write-us .left .box h3 {
+    line-height: 27px;
     text-align: center;
     padding: 25px;
   }
@@ -1328,6 +1368,12 @@ section.write-us .right .box {
 
 footer {
   background-color: #F9F9FA;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 1360px) {
+  footer {
+    width: 1360px;
+  }
 }
 footer .top {
   height: 104px;
@@ -1335,7 +1381,6 @@ footer .top {
 footer .top div {
   position: relative;
   height: 100px;
-  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1393,7 +1438,6 @@ footer .bottom {
 @media only screen and (min-width: 1201px) {
   footer .bottom .left {
     position: absolute;
-    left: 10%;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
@@ -1423,12 +1467,13 @@ footer .bottom .left ul > li {
   footer .bottom .left ul > li {
     margin-right: 48px;
     display: inline;
+    font-size: 14px;
   }
 }
 @media only screen and (min-width: 1201px) {
   footer .bottom .right {
     position: absolute;
-    right: 10%;
+    right: 0;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
