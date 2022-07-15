@@ -1214,7 +1214,7 @@ header .img {
 
 @media only screen and (max-width: 1200px) {
   .slick-slide {
-    top: -200px;
+    top: -180px;
   }
 }
 
@@ -1231,11 +1231,11 @@ header .img {
   border: 1px solid #ECEDF0;
   color: transparent;
   cursor: pointer;
+  top: 50%;
+  position: absolute;
 }
 
 .slick-next {
-  position: absolute;
-  top: 50%;
   right: 0;
 }
 
@@ -1248,7 +1248,7 @@ header .img {
 }
 
 .slick-prev {
-  top: 50%;
+  z-index: 1;
   left: 0;
 }
 

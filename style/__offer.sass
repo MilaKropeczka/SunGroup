@@ -156,7 +156,7 @@
 
 .slick-slide
     @media only screen and (max-width: $mobile)
-        top: -200px
+        top: -180px
 
 .slick-list, .slick-slider
     position: relative
@@ -170,10 +170,10 @@
     border: 1px solid $grey-100
     color: transparent
     cursor: pointer
+    top: 50%
+    position: absolute
 
 .slick-next
-    position: absolute
-    top: 50%
     right: 0
 
 .slick-next::before
@@ -182,7 +182,7 @@
     color: $primary-600
     transform: translate(0, 9px)
 .slick-prev
-    top: 50%
+    z-index: 1
     left: 0
 
 .slick-prev::before
