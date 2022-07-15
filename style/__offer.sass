@@ -61,7 +61,7 @@
                 grid-row: 1/2
                 text-align: center
         .box
-            @media only screen and (max-width: $deskop)
+            @media only screen and (min-width: $deskop)
                 max-width: 548px
         p.caption
             font-family: 'Poppins'
@@ -81,6 +81,8 @@
                 // left: 50%
                 margin: 0 auto
                 transform: translateY(-50%)
+            @media only screen and (max-width: 400px)
+                padding: 0 32px
             @media only screen and (min-width: 800px) and (max-width: 900px)
                 padding: 0 80px
             @media only screen and (min-width: 901px) and (max-width: 1000px)

@@ -3,6 +3,8 @@ const nav = document.querySelector(`nav .nav_mobile`);
 
 const toggleMenu = () => {
 	nav.classList.toggle('show');
+	bar.classList.toggle(`fa-bars`);
+	bar.classList.toggle(`fa-xmark`);
 };
 
 bar.addEventListener(`click`, toggleMenu);
