@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SunPage</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;500;600&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/63c2ed45b2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -52,7 +53,8 @@
                 <button class="primary_large">Dowiedz się więcej</button>
             </div>
         </div>
-        <div class="right hidden-mobile">
+        <!-- <div class="right hidden-mobile"> -->
+        <div class="right">
             <div class="img"></div>
         </div>
     </header>
@@ -153,29 +155,47 @@
                 </div>
             </div>
         </div>
-        <div class="item4">
-            <br>
-            <hr>
-            <div class="box">
-                <br>
-                <br>
-                <p class="caption caption1">Referencje</p>
-                <h2>Poznaj opinie naszych klientów</h2>
-                <blockquote>
-                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
-                        praising
-                        pain was
-                        born and I will give
-                        you a complete account of the system. But I must explain to you how all this mistaken idea of
-                        denouncing pleasure and
-                        praising pain was born and I will give you a complete account of the system.</p>
-                    <img src="./img/Picture@2x.jpg" alt="Avatar">
-                    <br>
-                    <cite>Jan Kowalski</cite>
-                    <p class="grey-700">Firma Jana Kowalskiego</p>
-                </blockquote>
-                <br>
-                <br>
+        <!-- <div class="item4"> -->
+        <div>
+            <br class="hidden-deskop">
+            <hr class="hrItem">
+            <div class="item4">
+                <div class="box">
+                    <p class="caption caption1">Referencje</p>
+                    <h2>Poznaj opinie naszych klientów</h2>
+                    <blockquote>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
+                            praising
+                            pain was
+                            born and I will give
+                            you a complete account of the system. But I must explain to you how all this mistaken idea
+                            of
+                            denouncing pleasure and
+                            praising pain was born and I will give you a complete account of the system.</p>
+                        <img src="./img/Picture@2x.jpg" alt="Avatar">
+                        <br>
+                        <cite>Jan Kowalski</cite>
+                        <p class="grey-700">Firma Jana Kowalskiego</p>
+                    </blockquote>
+                </div>
+                <div class="box">
+                    <p class="caption caption1">Referencje</p>
+                    <h2>Poznaj opinie naszych klientów</h2>
+                    <blockquote>
+                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and
+                            praising
+                            pain was
+                            born and I will give
+                            you a complete account of the system. But I must explain to you how all this mistaken idea
+                            of
+                            denouncing pleasure and
+                            praising pain was born and I will give you a complete account of the system.</p>
+                        <img src="./img/Picture@2x.jpg" alt="Avatar">
+                        <br>
+                        <cite>Jan Kowalski</cite>
+                        <p class="grey-700">Firma Jana Kowalskiego</p>
+                    </blockquote>
+                </div>
             </div>
         </div>
     </section>
@@ -249,9 +269,9 @@
     <section class="other">
         <div class="box">
             <div class="item">
-                <p class="white">Overline</p>
+                <p class="white poppins">Overline</p>
                 <h2 class="white">Przekonujący nagłówek w CTA</h2>
-                <p class="white">But I must explain to you how all this mistaken idea of denouncing pleasure and
+                <p class="white text">But I must explain to you how all this mistaken idea of denouncing pleasure and
                     praising
                     pain was born.
                 </p>
@@ -263,26 +283,29 @@
     <section class="write-us">
         <div class="left">
             <div class="box">
-                <h2>Napisz do nas</h2>
-                <form>
+                <h3>Napisz do nas</h3>
+                <form id="writeUs">
                     <div class="wrapper">
                         <div class="form formInput">
-                            <input type="text" id="name" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="text" pattern="[a-zA-Z'-'\s]*" id="name" class="form__input" autocomplete="off"
+                                placeholder=" " minlength="3" maxlength="32" required>
                             <label for="name" class="form__label">Imię</label>
                         </div>
-
                         <div class="form formInput">
-                            <input type="text" id="surname" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="text" pattern="[a-zA-Z'-'\s]*" id="surname" class="form__input"
+                                autocomplete="off" placeholder=" " minlength="3" maxlength="32" required>
                             <label for="surname" class="form__label">Nazwisko</label>
                         </div>
                     </div>
                     <div class="wrapper">
                         <div class="form formInput">
-                            <input type="text" id="email" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email"
+                                class="form__input" autocomplete="off" placeholder=" " required>
                             <label for="email" class="form__label">Adres e-mail</label>
                         </div>
                         <div class="form formInput">
-                            <input type="text" id="number" class="form__input" autocomplete="off" placeholder=" ">
+                            <input type="tel" pattern="(\(?(\+|00)?48\)?)?[ -]?\d{3}[ -]?\d{3}[ -]?\d{3}" id="number"
+                                class="form__input" autocomplete="off" placeholder=" " maxlength="11" required>
                             <label for="number" class="form__label">Numer telefonu</label>
                         </div>
                     </div>
@@ -292,11 +315,15 @@
                             placeholder=" "></textarea>
                         <label for="message" class="form__label">Twoja wiadomość</label>
                     </div>
-                    <input type="checkbox" name="rule" id="rule">Zapoznałem się z regulaminem i wyrażam zgodę na
-                    przetwarzanie moich danych osobowych przez
-                    Sungroup.pl
+
+                    <p> <input type="checkbox" name="rule" id="rule">
+                        <label for="rule">
+                            Zapoznałem się z regulaminem i wyrażam zgodę na
+                            przetwarzanie moich danych osobowych przez
+                            Sungroup.pl</label>
+                    </p>
                     <br>
-                    <button class="primary_large">Wyślij wiadomość</button>
+                    <button id="formBtn" class="primary_large">Wyślij wiadomość</button>
                 </form>
             </div>
         </div>
@@ -349,7 +376,10 @@
             </div>
         </div>
     </footer>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./scripts/slick.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
 

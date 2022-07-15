@@ -1,5 +1,6 @@
 .section-offer
     background-color: #fff
+    display: grid
     +gridCenter
     @media only screen and (min-width: $deskop)
         height: 2833px
@@ -13,10 +14,14 @@
             grid-template-rows: 1fr
         @media only screen and (max-width: $mobile)
             grid-template-columns: 1fr
+        .img
+            @media only screen and (max-width: $mobile)
+                height: 350px
         h2
             margin-bottom: 20px
             margin-top: 12px
         p.offer
+            color: $grey-900
             line-height: 18px
             margin-bottom: 32px
             @media only screen and (min-width: $deskop)
@@ -58,26 +63,71 @@
         .box
             @media only screen and (max-width: $deskop)
                 max-width: 548px
+        p.caption
+            font-family: 'Poppins'
     .item4
         display: grid
         justify-content: center
+        @media only screen and (max-width: $mobile)
+            margin-bottom: 20px
         // overflow: hidden
         .box
             position: relative
-            max-width: 900px
+            // max-width: 940px
             text-align: center
             @media only screen and (min-width: $deskop)
+                // width: 900px
                 top: 50%
-                left: 50%
-                transform: translate(-50%, -50%)
+                // left: 50%
+                margin: 0 auto
+                transform: translateY(-50%)
+            @media only screen and (min-width: 800px) and (max-width: 900px)
+                padding: 0 80px
+            @media only screen and (min-width: 901px) and (max-width: 1000px)
+                padding: 0 160px
+            @media only screen and (min-width: 1001px) and (max-width: 1200px)
+                padding: 0 200px
             img
                 border-radius: 50%
+                width: 46px
+                height: 46px
+                margin: 10px
+                margin-top: 30px
+                margin: 30px auto 0 auto
+            p
+                @media only screen and (min-width: $deskop)
+                    width: 900px
+        p.caption
+            margin: 0 auto
+            font-weight: 500
+            font-family: 'Poppins'
+        h2
+            color: $grey-900
+        blockquote
+            p
+                margin: 0 auto
+                line-height: 18px
+                color: $grey-900
+                @media only screen and (min-width: $deskop)
+                    line-height: 28px
+            cite
+                color: $grey-900
+                font-style: normal
+                line-height: 30px
+                font-size: 18px
+            .grey-700
+                margin: 0
+                width: 100%
+                text-align: center
+                line-height: 28px
+                color: $grey-700
     img.image
         border-radius: 8px
         @media only screen and (min-width: $deskop)
             margin: 128px 60px
             height: 548px
             width: 548px
+
 .section-offer .items > *
     display: grid
     justify-content: center
@@ -95,7 +145,67 @@
     height: 548px
 #img_1
     background-image: url(../img/Image@2x-5.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
 #img_2
     background-image: url(../img/Image@2x-4.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
 #img_3
     background-image: url(../img/Image@2x-3.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
+
+.hrItem
+    @media only screen and (min-width: $deskop)
+        margin-bottom: 148px
+
+.slick-track
+    position: relative
+    top: 50%
+    left: 0
+    transform: translate(-50%,-50%)
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+.slick-slide
+    @media only screen and (max-width: $mobile)
+        top: -180px
+    @media only screen and (min-width: 382px)
+        top: -150px
+    @media only screen and (min-width: 564px)
+        top: -130px
+
+.slick-list, .slick-slider
+    position: relative
+
+.slick-arrow
+    display: none
+    height: 40px
+    width: 40px
+    border-radius: 30px
+    background-color: $white
+    border: 1px solid $grey-100
+    color: transparent
+    cursor: pointer
+    top: 50%
+    position: absolute
+
+.slick-next
+    right: 0
+
+.slick-next::before
+    content: url(../img/Icon/20x20/ArrowRight.svg)
+    display: block
+    color: $primary-600
+    transform: translate(0, 9px)
+.slick-prev
+    z-index: 1
+    left: 0
+
+.slick-prev::before
+    content: url(../img/Icon/20x20/ArrowLeft.svg)
+    display: block
+    color: $primary-600
+    transform: translate(0px, 9px)

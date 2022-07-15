@@ -36,10 +36,15 @@
     font-size: 12px
     left: 15px
 
-.error:focus
+// .error:focus
+//     border: 2px solid $red-900 !important
+
+// .success:focus
+//     border: 2px solid $green-900 !important
+.error
     border: 2px solid $red-900 !important
 
-.success:focus
+.success
     border: 2px solid $green-900 !important
 
 .red-900
@@ -47,3 +52,11 @@
 
 textarea
     resize: none
+    line-height: 28px
+    @media only screen and (max-width: $mobile)
+        line-height: 20px
+input
+    line-height: 28px
+    @media only screen and (max-width: $mobile)
+        line-height: 20px
+

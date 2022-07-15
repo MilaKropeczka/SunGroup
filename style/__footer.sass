@@ -1,11 +1,14 @@
 footer
     background-color: $grey-50
+    margin: 0 auto
+    @media only screen and (min-width: 1360px)
+        width: 1360px
     .top
         height: 104px
         div
             position: relative
             height: 100px
-            width: 80%
+            // width: 80%
             display: flex
             align-items: center
             justify-content: flex-end
@@ -34,7 +37,7 @@ footer
         .left
             @media only screen and (min-width: $deskop)
                 position: absolute
-                left: 10%
+                // left: 10%
                 top: 50%
                 transform: translateY(-50%)
             @media only screen and (max-width: $mobile)
@@ -44,6 +47,7 @@ footer
                 top: 40%
                 transform: translate(-50%, -50%)
             ul > li
+                color: $grey-700
                 list-style: none
                 @media only screen and (max-width: $mobile)
                     text-align: center
@@ -51,10 +55,11 @@ footer
                 @media only screen and (min-width: $deskop)
                     margin-right: 48px
                     display: inline
+                    font-size: 14px
         .right
             @media only screen and (min-width: $deskop)
                 position: absolute
-                right: 10%
+                right: 0
                 top: 50%
                 transform: translateY(-50%)
                 cursor: pointer

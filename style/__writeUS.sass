@@ -1,5 +1,5 @@
 section.write-us
-    // overflow: hidden
+
     position: relative
     background-color: $white
     display: flex
@@ -8,7 +8,6 @@ section.write-us
     .left
         overflow: hidden
         .box
-            // overflow: hidden
             position: relative
             border-radius: 8px
             margin: 16px
@@ -18,18 +17,25 @@ section.write-us
                 padding: 48px
                 height: 686px
             @media only screen and (max-width: $mobile)
-                height: 740px
-            h2
+                height: 800px
+            h3
+                line-height: 42px
+                color: $grey-900
+                padding: 0 0 30px 20px
                 @media only screen and (max-width: $mobile)
+                    line-height: 27px
                     text-align: center
                     padding: 25px
+            form
+                p
+                    color: $grey-900
+                    font-size: 14px
+                    line-height: 26px
 
             .wrapper
                 @media only screen and (min-width: $deskop)
                     display: grid
                     grid-template-columns: 1fr 1fr
-            #message
-                // max-width: 550px
             button
                 position: absolute
                 margin: 48px

@@ -3,10 +3,9 @@ header
     display: grid
     @media only screen and (max-width: $mobile)
         grid-template-columns: 1fr
-        // grid-template-columns: 400px
-        // width: 100%
-        grid-template-row: 1fr
-        height: 800px
+        grid-template-row: 500px 400px
+        height: 900px
+        margin-top: 60px
     @media only screen and (min-width: $deskop)
         grid-template-columns: 1fr 1fr
         grid-template-row: 1fr
@@ -17,8 +16,8 @@ header
         @media only screen and (min-width: $deskop)
             grid-column: 1/2
         @media only screen and (max-width: $mobile)
-            grid-row: 1/2
-            padding: 100px 0
+            grid-row: 2/3
+            padding: 230px 0
         .box
             position: absolute
             @media only screen and (min-width: $deskop)
@@ -29,6 +28,14 @@ header
             @media only screen and (max-width: $mobile)
                 top: 50%
                 transform: translateY(-50%)
+            @media only screen and (min-width: 500px) and (max-width: 600px)
+                margin: 0 80px
+            @media only screen and (min-width: 601px) and (max-width: 750px)
+                margin: 0 120px
+            @media only screen and (min-width: 751px) and (max-width: 900px)
+                margin: 0 200px
+            @media only screen and (min-width: 901px) and (max-width: 1000px)
+                margin: 0 220px
             p
                 line-height: 18px
                 @media only screen and (min-width: $deskop)
@@ -37,14 +44,21 @@ header
             margin: 23px
     .right
         position: relative
-        // overflow: hidden
         @media only screen and (min-width: $deskop)
             grid-column: 2/3
         @media only screen and (max-width: $mobile)
             grid-row: 1/2
+            height: 450px
 header .img
     height: 100%
     width: 100%
     background-image: url(../img/Image@2x-6.jpg)
     background-size: cover
     background-position: center
+    background-repeat: no-repeat
+    @media only screen and (min-width: 800px) and (max-width: 900px)
+        background-size: cover
+        background-position: 0 -120px
+    @media only screen and (min-width: 901px) and (max-width: 1000px)
+        background-size: cover
+        background-position: 0 -150px
