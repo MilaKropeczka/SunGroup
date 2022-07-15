@@ -1109,6 +1109,7 @@ header .img {
   height: 46px;
   margin: 10px;
   margin-top: 30px;
+  margin: 30px auto 0 auto;
 }
 @media only screen and (min-width: 1201px) {
   .section-offer .item4 .box p {
@@ -1116,6 +1117,7 @@ header .img {
   }
 }
 .section-offer .item4 p.caption {
+  margin: 0 auto;
   font-weight: 500;
   font-family: "Poppins";
 }
@@ -1123,6 +1125,7 @@ header .img {
   color: #242529;
 }
 .section-offer .item4 blockquote p {
+  margin: 0 auto;
   line-height: 18px;
   color: #242529;
 }
@@ -1190,6 +1193,71 @@ header .img {
 
 #img_3 {
   background-image: url(../img/Image@2x-3.jpg);
+}
+
+@media only screen and (min-width: 1201px) {
+  .hrItem {
+    margin-bottom: 148px;
+  }
+}
+
+.slick-track {
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 1200px) {
+  .slick-slide {
+    top: -200px;
+  }
+}
+
+.slick-list, .slick-slider {
+  position: relative;
+}
+
+.slick-arrow {
+  display: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 30px;
+  background-color: #FFFFFF;
+  border: 1px solid #ECEDF0;
+  color: transparent;
+  cursor: pointer;
+}
+
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.slick-next::before {
+  content: url(../img/Icon/20x20/ArrowRight.svg);
+  display: block;
+  color: #6E9EFF;
+  -webkit-transform: translate(0, 9px);
+          transform: translate(0, 9px);
+}
+
+.slick-prev {
+  top: 50%;
+  left: 0;
+}
+
+.slick-prev::before {
+  content: url(../img/Icon/20x20/ArrowLeft.svg);
+  display: block;
+  color: #6E9EFF;
+  -webkit-transform: translate(0px, 9px);
+          transform: translate(0px, 9px);
 }
 
 section.blog {

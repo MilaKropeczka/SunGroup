@@ -71,9 +71,7 @@ messageForm.addEventListener('keydown', () => {
 		messageForm.classList.add(`error`);
 	}
 });
-// const writeUsForm = document.querySelector(`#writeUs`);
 const checkBoxRule = document.querySelector(`#rule`);
-console.log(checkBoxRule.checked);
 
 const formBtn = document.querySelector(`#formBtn`);
 formBtn.addEventListener(`click`, (e) => {
