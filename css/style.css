@@ -426,6 +426,42 @@ hr {
   left: 15px;
 }
 
+.wrapper {
+  position: relative;
+}
+.wrapper p.item {
+  position: absolute;
+  bottom: -22px;
+  left: 2px;
+  font-size: 12px !important;
+  font-family: "Poppins";
+  color: #C90D0D !important;
+  visibility: hidden;
+}
+@media only screen and (max-width: 1200px) {
+  .wrapper p.item {
+    bottom: -18px;
+    font-size: 8px !important;
+  }
+}
+
+#itemMessage {
+  font-size: 12px !important;
+  font-family: "Poppins";
+  visibility: hidden;
+  color: #C90D0D !important;
+  padding: 0 5px;
+}
+@media only screen and (max-width: 1200px) {
+  #itemMessage {
+    font-size: 8px !important;
+  }
+}
+
+.visibility {
+  visibility: visible !important;
+}
+
 .error {
   border: 2px solid #C90D0D !important;
 }
