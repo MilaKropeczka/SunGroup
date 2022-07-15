@@ -28,6 +28,14 @@ header
             @media only screen and (max-width: $mobile)
                 top: 50%
                 transform: translateY(-50%)
+            @media only screen and (min-width: 500px) and (max-width: 600px)
+                margin: 0 80px
+            @media only screen and (min-width: 601px) and (max-width: 750px)
+                margin: 0 120px
+            @media only screen and (min-width: 751px) and (max-width: 900px)
+                margin: 0 200px
+            @media only screen and (min-width: 901px) and (max-width: 1000px)
+                margin: 0 220px
             p
                 line-height: 18px
                 @media only screen and (min-width: $deskop)
@@ -47,3 +55,10 @@ header .img
     background-image: url(../img/Image@2x-6.jpg)
     background-size: cover
     background-position: center
+    background-repeat: no-repeat
+    @media only screen and (min-width: 800px) and (max-width: 900px)
+        background-size: cover
+        background-position: 0 -120px
+    @media only screen and (min-width: 901px) and (max-width: 1000px)
+        background-size: cover
+        background-position: 0 -150px

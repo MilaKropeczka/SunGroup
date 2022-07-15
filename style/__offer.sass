@@ -1,5 +1,6 @@
 .section-offer
     background-color: #fff
+    display: grid
     +gridCenter
     @media only screen and (min-width: $deskop)
         height: 2833px
@@ -67,6 +68,8 @@
     .item4
         display: grid
         justify-content: center
+        @media only screen and (max-width: $mobile)
+            margin-bottom: 20px
         // overflow: hidden
         .box
             position: relative
@@ -78,6 +81,12 @@
                 // left: 50%
                 margin: 0 auto
                 transform: translateY(-50%)
+            @media only screen and (min-width: 800px) and (max-width: 900px)
+                padding: 0 80px
+            @media only screen and (min-width: 901px) and (max-width: 1000px)
+                padding: 0 160px
+            @media only screen and (min-width: 1001px) and (max-width: 1200px)
+                padding: 0 200px
             img
                 border-radius: 50%
                 width: 46px
@@ -136,10 +145,16 @@
     height: 548px
 #img_1
     background-image: url(../img/Image@2x-5.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
 #img_2
     background-image: url(../img/Image@2x-4.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
 #img_3
     background-image: url(../img/Image@2x-3.jpg)
+    @media only screen and (min-width: 548px)
+                border-radius: 8px
 
 .hrItem
     @media only screen and (min-width: $deskop)
@@ -157,6 +172,10 @@
 .slick-slide
     @media only screen and (max-width: $mobile)
         top: -180px
+    @media only screen and (min-width: 382px)
+        top: -150px
+    @media only screen and (min-width: 564px)
+        top: -130px
 
 .slick-list, .slick-slider
     position: relative
@@ -190,39 +209,3 @@
     display: block
     color: $primary-600
     transform: translate(0px, 9px)
-
-
-
-
-// .slick-list, .slick-slider
-//     position: relative
-
-// .slick-arrow
-//     position: absolute
-//     display: none
-//     height: 40px
-//     width: 40px
-//     border-radius: 30px
-//     background-color: $white
-//     border: 1px solid $grey-100
-//     top: 50%
-//     color: transparent
-//     cursor: pointer
-
-// .slick-next
-//     right: 0
-
-// .slick-next::before
-//     content: url(../img/Icon/20x20/ArrowRight.svg)
-//     display: block
-//     color: $primary-600
-//     transform: translate(0, 9px)
-
-// .slick-prev
-//     left: 0
-
-// .slick-prev::before
-//     content: url(../img/Icon/20x20/ArrowLeft.svg)
-//     display: block
-//     color: $primary-600
-//     transform: translate(0px, 9px)
