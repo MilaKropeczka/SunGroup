@@ -23,72 +23,42 @@ const itemEmail = document.querySelector(`#itemEmail`);
 const itemNumber = document.querySelector(`#itemNumber`);
 const itemMessage = document.querySelector(`#itemMessage`);
 
-const addClassName = () => {
-	const reg = /[a-zA-Z'-'\s]*/;
-	if (reg.test(itemName.value) && nameForm.value.length > 2) {
-		nameForm.classList.remove(`error`);
-		itemName.classList.remove(`visibility`);
-		nameForm.classList.add(`success`);
-	} else {
-		nameForm.classList.remove(`success`);
-		nameForm.classList.add(`error`);
-		itemName.classList.add(`visibility`);
+class Check {
+	constructor(reg) {
+		this.reg = reg;
 	}
-};
+	checkReg = (e) => {
+		if (this.reg.test(e.target.value) && e.target.value.length > 2) {
+			e.target.classList.remove(`error`);
+			e.target.classList.add(`success`);
+			// itemName.classList.remove(`visibility`);
+		} else {
+			e.target.classList.remove(`success`);
+			e.target.classList.add(`error`);
+			// itemName.classList.add(`visibility`);
+		}
+	};
+}
+const nameReg = new Check(/[a-zA-Z'-'\s]*/);
+const surnameReg = new Check(/[a-zA-Z'-'\s]*/);
+const emailReg = new Check(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/);
+const numberReg = new Check(/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/);
+const messageReg = new Check(/[a-zA-Z'-'\s]*/);
 
-const addClassSurname = () => {
-	const reg = /[a-zA-Z'-'\s]*/;
-	if (reg.test(surnameForm.value) && surnameForm.value.length > 2) {
-		surnameForm.classList.remove(`error`);
-		itemSurname.classList.remove(`visibility`);
-		surnameForm.classList.add(`success`);
-	} else {
-		surnameForm.classList.remove(`success`);
-		surnameForm.classList.add(`error`);
-		itemSurname.classList.add(`visibility`);
-	}
-};
-
-const addClassEmail = () => {
-	const reg = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
-	if (reg.test(emailForm.value)) {
-		emailForm.classList.remove(`error`);
-		itemEmail.classList.remove(`visibility`);
-		emailForm.classList.add(`success`);
-	} else {
-		emailForm.classList.remove(`success`);
-		emailForm.classList.add(`error`);
-		itemEmail.classList.add(`visibility`);
-	}
-};
-
-const addClassNumber = () => {
-	// const reg = /[0-9]/;
-	const reg = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{3})/;
-	if (reg.test(numberForm.value)) {
-		numberForm.classList.remove(`error`);
-		itemNumber.classList.remove(`visibility`);
-		numberForm.classList.add(`success`);
-	} else {
-		numberForm.classList.remove(`success`);
-		numberForm.classList.add(`error`);
-		itemNumber.classList.add(`visibility`);
-	}
-};
-const addClassMessage = () => {
-	if (messageForm.value.length > 30) {
-		messageForm.classList.remove(`error`);
-		itemMessage.classList.remove(`visibility`);
-		messageForm.classList.add(`success`);
-	} else {
-		messageForm.classList.remove(`success`);
-		messageForm.classList.add(`error`);
-		itemMessage.classList.add(`visibility`);
-	}
-};
+nameForm.addEventListener(`focus`, nameReg.checkReg);
+nameForm.addEventListener(`keyup`, nameReg.checkReg);
+surnameForm.addEventListener(`focus`, surnameReg.checkReg);
+surnameForm.addEventListener(`keyup`, surnameReg.checkReg);
+emailForm.addEventListener(`focus`, emailReg.checkReg);
+emailForm.addEventListener(`keyup`, emailReg.checkReg);
+numberForm.addEventListener(`focus`, numberReg.checkReg);
+numberForm.addEventListener(`keyup`, numberReg.checkReg);
+messageForm.addEventListener(`focus`, messageReg.checkReg);
+messageForm.addEventListener(`keyup`, messageReg.checkReg);
 
 const checkCheckbox = () => {
 	if (checkBoxRule.checked === true) {
+		checkBoxRule.classList.remove(`errorCheckbox`);
 	} else {
 		checkBoxRule.classList.add(`errorCheckbox`);
 	}
@@ -96,21 +66,11 @@ const checkCheckbox = () => {
 
 const checkInputs = () => {
 	checkCheckbox();
-	addClassName();
-	addClassSurname();
-	addClassEmail();
-	addClassNumber();
-	addClassMessage();
+	nameReg.checkReg();
+	surnameReg.checkReg();
+	emailReg.checkReg();
+	numberReg.checkReg();
+	messageReg.checkReg();
 };
 
-nameForm.addEventListener('keyup', addClassName);
-nameForm.addEventListener('focus', addClassName);
-surnameForm.addEventListener('keyup', addClassSurname);
-surnameForm.addEventListener('focus', addClassSurname);
-emailForm.addEventListener('keyup', addClassEmail);
-emailForm.addEventListener('focus', addClassEmail);
-numberForm.addEventListener('keyup', addClassNumber);
-numberForm.addEventListener('focus', addClassNumber);
-messageForm.addEventListener('keyup', addClassMessage);
-messageForm.addEventListener('focus', addClassMessage);
 formBtn.addEventListener(`click`, checkInputs);
