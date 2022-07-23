@@ -31,11 +31,49 @@ class Check {
 		if (this.reg.test(e.target.value) && e.target.value.length > 2) {
 			e.target.classList.remove(`error`);
 			e.target.classList.add(`success`);
-			// itemName.classList.remove(`visibility`);
+			switch (true) {
+				case e.target.id === `name`:
+					itemName.classList.remove(`visibility`);
+					break;
+				case e.target.id === `surname`:
+					itemSurname.classList.remove(`visibility`);
+					break;
+				case e.target.id === `email`:
+					itemEmail.classList.remove(`visibility`);
+					break;
+				case e.target.id === `number`:
+					itemNumber.classList.remove(`visibility`);
+					break;
+				case e.target.id === `message`:
+					itemMessage.classList.remove(`visibility`);
+					break;
+				default:
+					console.error(`err`);
+					break;
+			}
 		} else {
 			e.target.classList.remove(`success`);
 			e.target.classList.add(`error`);
-			// itemName.classList.add(`visibility`);
+			switch (true) {
+				case e.target.id === `name`:
+					itemName.classList.add(`visibility`);
+					break;
+				case e.target.id === `surname`:
+					itemSurname.classList.add(`visibility`);
+					break;
+				case e.target.id === `email`:
+					itemEmail.classList.add(`visibility`);
+					break;
+				case e.target.id === `number`:
+					itemNumber.classList.add(`visibility`);
+					break;
+				case e.target.id === `message`:
+					itemMessage.classList.add(`visibility`);
+					break;
+				default:
+					console.error(`err`);
+					break;
+			}
 		}
 	};
 }
@@ -64,13 +102,13 @@ const checkCheckbox = () => {
 	}
 };
 
-const checkInputs = () => {
-	checkCheckbox();
-	nameReg.checkReg();
-	surnameReg.checkReg();
-	emailReg.checkReg();
-	numberReg.checkReg();
-	messageReg.checkReg();
-};
+// const checkInputs = () => {
+// 	checkCheckbox();
+// 	nameReg.checkReg();
+// 	surnameReg.checkReg();
+// 	emailReg.checkReg();
+// 	numberReg.checkReg();
+// 	messageReg.checkReg();
+// };
 
-formBtn.addEventListener(`click`, checkInputs);
+// formBtn.addEventListener(`click`, checkInputs);
