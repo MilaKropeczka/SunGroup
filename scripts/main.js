@@ -23,6 +23,37 @@ const itemEmail = document.querySelector(`#itemEmail`);
 const itemNumber = document.querySelector(`#itemNumber`);
 const itemMessage = document.querySelector(`#itemMessage`);
 
+let errName = true;
+let errSurname = true;
+let errEmail = true;
+let errNumber = true;
+let errMessage = true;
+
+const checkInputs = () => {
+	switch (true) {
+		case errName === false:
+			console.log(`error name`);
+			nameForm.classList.add(`error`);
+			itemName.classList.add(`visibility`);
+		case errSurname === false:
+			console.log(`error surname`);
+			surnameForm.classList.add(`error`);
+			itemSurname.classList.add(`visibility`);
+		case errEmail === true:
+			console.log(`error email`);
+			emailForm.classList.add(`error`);
+			itemEmail.classList.add(`visibility`);
+		case errNumber === true:
+			console.log(`error number`);
+			numberForm.classList.add(`error`);
+			itemNumber.classList.add(`visibility`);
+		case errMessage === true:
+			console.log(`error message`);
+			messageForm.classList.add(`error`);
+			itemMessage.classList.add(`visibility`);
+	}
+};
+
 class Check {
 	constructor(reg) {
 		this.reg = reg;
@@ -34,18 +65,23 @@ class Check {
 			switch (true) {
 				case e.target.id === `name`:
 					itemName.classList.remove(`visibility`);
+					errName = false;
 					break;
 				case e.target.id === `surname`:
 					itemSurname.classList.remove(`visibility`);
+					errSurname = false;
 					break;
 				case e.target.id === `email`:
 					itemEmail.classList.remove(`visibility`);
+					errEmail = false;
 					break;
 				case e.target.id === `number`:
 					itemNumber.classList.remove(`visibility`);
+					errNumber = false;
 					break;
 				case e.target.id === `message`:
 					itemMessage.classList.remove(`visibility`);
+					errMessage = false;
 					break;
 				default:
 					console.error(`err`);
@@ -57,18 +93,23 @@ class Check {
 			switch (true) {
 				case e.target.id === `name`:
 					itemName.classList.add(`visibility`);
+					errName = true;
 					break;
 				case e.target.id === `surname`:
 					itemSurname.classList.add(`visibility`);
+					errSurname = true;
 					break;
 				case e.target.id === `email`:
 					itemEmail.classList.add(`visibility`);
+					errEmail = true;
 					break;
 				case e.target.id === `number`:
 					itemNumber.classList.add(`visibility`);
+					errNumber = true;
 					break;
 				case e.target.id === `message`:
 					itemMessage.classList.add(`visibility`);
+					errMessage = true;
 					break;
 				default:
 					console.error(`err`);
@@ -94,6 +135,45 @@ numberForm.addEventListener(`keyup`, numberReg.checkReg);
 messageForm.addEventListener(`focus`, messageReg.checkReg);
 messageForm.addEventListener(`keyup`, messageReg.checkReg);
 
+document.querySelectorAll('form textarea input').forEach((i) => {
+	// console.log(i);
+	// i.addEventListener('click', (e) => {
+	// 	console.log(e.target);
+	// }
+	// );
+	console.log(i.value);
+	if (i.value == ``) {
+		i.classList.add(`error`);
+
+		switch (true) {
+			case i.id === `name`:
+				itemName.classList.add(`visibility`);
+				break;
+			case i.id === `surname`:
+				itemSurname.classList.add(`visibility`);
+				break;
+			case i.id === `email`:
+				itemEmail.classList.add(`visibility`);
+				break;
+			case i.id === `number`:
+				itemNumber.classList.add(`visibility`);
+				break;
+			case i.id === `message`:
+				itemMessage.classList.add(`visibility`);
+				break;
+			default:
+				console.error(`err`);
+				break;
+		}
+	}
+	// switch (true) {
+	// 	case errName === false:
+	// 		console.log(`error name`);
+	// 		nameForm.classList.add(`error`);
+	// 		itemName.classList.add(`visibility`);
+	// }
+});
+
 const checkCheckbox = () => {
 	if (checkBoxRule.checked === true) {
 		checkBoxRule.classList.remove(`errorCheckbox`);
@@ -101,14 +181,5 @@ const checkCheckbox = () => {
 		checkBoxRule.classList.add(`errorCheckbox`);
 	}
 };
-
-// const checkInputs = () => {
-// 	checkCheckbox();
-// 	nameReg.checkReg();
-// 	surnameReg.checkReg();
-// 	emailReg.checkReg();
-// 	numberReg.checkReg();
-// 	messageReg.checkReg();
-// };
 
 // formBtn.addEventListener(`click`, checkInputs);
