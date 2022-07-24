@@ -36,11 +36,30 @@
     font-size: 12px
     left: 15px
 
-// .error:focus
-//     border: 2px solid $red-900 !important
+.wrapper
+    position: relative
+    p.item
+        position: absolute
+        bottom: -22px
+        left: 2px
+        font-size: 12px !important
+        font-family: 'Poppins'
+        color: $red-900 !important
+        visibility: hidden
+        @media only screen and (max-width: $mobile)
+            bottom: -18px
+            font-size: 8px !important
+#itemMessage
+    font-size: 12px !important
+    font-family: 'Poppins'
+    visibility: hidden
+    color: $red-900 !important
+    padding: 0 5px
+    @media only screen and (max-width: $mobile)
+        font-size: 8px !important
+.visibility
+        visibility: visible !important
 
-// .success:focus
-//     border: 2px solid $green-900 !important
 .error
     border: 2px solid $red-900 !important
 
